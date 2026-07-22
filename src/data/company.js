@@ -2,9 +2,9 @@
 export const ALIBABA_STORE = 'https://www.alibaba.com/';
 
 export const CONTACT = {
-  email: 'sales@chiaty.com',
-  phone: '+86 579 0000 0000',
-  whatsapp: '+86 000 0000 0000',
+  email: 'andy@chiaty.com',
+  phone: '+86 13026211320',
+  whatsapp: '+86 13026211320',
   address: 'Jinhua, Zhejiang, China',
   company: 'Jinhua Jiading Leisure Co., Ltd.',
 };
