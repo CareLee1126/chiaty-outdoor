@@ -83,9 +83,8 @@ images separately.
 
 ## Before you go live — update these
 
-Edit `src/data/company.js` with your real details (currently placeholders):
-- `CONTACT.email`, `CONTACT.phone`, `CONTACT.whatsapp`
-- `ALIBABA_STORE` → your actual Alibaba storefront URL
+Edit `src/data/company.js` with your real details:
+- `CONTACT.email`, `CONTACT.phone`, `CONTACT.whatsapp` (already set)
 - Factory stats / certifications if your real figures differ
 
 The inquiry form uses a `mailto:` link to `CONTACT.email`. To capture leads in a

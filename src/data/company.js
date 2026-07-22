@@ -1,6 +1,4 @@
 // Company profile constants. Update contact details with your confirmed values.
-export const ALIBABA_STORE = 'https://www.alibaba.com/';
-
 export const CONTACT = {
   email: 'andy@chiaty.com',
   phone: '+86 13026211320',

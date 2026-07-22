@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ALIBABA_STORE, CONTACT } from '../data/company';
+import { CONTACT } from '../data/company';
 
 export default function Footer() {
   return (
@@ -24,7 +24,6 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h5>Sourcing</h5>
-            <a href={ALIBABA_STORE} target="_blank" rel="noreferrer">Alibaba Store</a>
             <Link to="/contact">Request a Quote</Link>
             <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
           </div>

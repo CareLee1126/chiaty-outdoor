@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Mail, Phone, MapPin, Building2, MessageCircle } from 'lucide-react';
-import { CONTACT, ALIBABA_STORE } from '../data/company';
+import { CONTACT } from '../data/company';
 import { categories } from '../data/products';
 
 export default function Contact() {
@@ -119,10 +119,6 @@ export default function Contact() {
               <div className="info-row">
                 <div className="k"><MapPin size={13} style={{ verticalAlign: '-2px', marginRight: 6 }} />Location</div>
                 <div className="v">{CONTACT.address}</div>
-              </div>
-              <div className="info-row">
-                <div className="k">Alibaba Store</div>
-                <div className="v"><a href={ALIBABA_STORE} target="_blank" rel="noreferrer">Visit our storefront →</a></div>
               </div>
             </aside>
           </div>

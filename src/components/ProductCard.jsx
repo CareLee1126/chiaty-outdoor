@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink } from 'lucide-react';
 
 export default function ProductCard({ product }) {
   const quoteHref = `/contact?product=${encodeURIComponent(product.name)}`;
@@ -21,9 +20,6 @@ export default function ProductCard({ product }) {
         </div>
         <div className="prod-actions">
           <Link className="btn btn-accent" to={quoteHref}>Request Quote</Link>
-          <a className="btn btn-ghost" href={product.alibabaUrl} target="_blank" rel="noreferrer" aria-label="View on Alibaba">
-            <ExternalLink size={15} />
-          </a>
         </div>
       </div>
     </article>
