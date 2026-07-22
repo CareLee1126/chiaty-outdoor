@@ -53,12 +53,12 @@ Open the Vercel URL, check the homepage, Products (50 products + filters), Facto
 
 ## 4. Connect your Namecheap domain
 
-1. In Vercel: **Project → Settings → Domains → Add** your domain (e.g. `chiaty.com`).
+1. In Vercel: **Project → Settings → Domains → Add** both `www.chiatyoutdoor.com` and `chiatyoutdoor.com` (set `www` as primary and redirect the apex to it, or vice-versa).
 2. Vercel shows the DNS records to set. In **Namecheap → Domain List → Manage → Advanced DNS**:
-   - **Apex domain** (`chiaty.com`): add an **A record** → Host `@` → Value `76.76.21.21`
-   - **www**: add a **CNAME record** → Host `www` → Value `cname.vercel-dns.com`
+   - **www** (primary): add a **CNAME record** → Host `www` → Value `cname.vercel-dns.com`
+   - **Apex domain** (`chiatyoutdoor.com`): add an **A record** → Host `@` → Value `76.76.21.21`
    - (Use the exact values Vercel shows you — they can vary.)
-3. Wait for DNS to propagate (minutes to a few hours). Vercel auto-issues HTTPS.
+3. Wait for DNS to propagate (minutes to a few hours). Vercel auto-issues HTTPS for `www.chiatyoutdoor.com`.
 
 > Alternatively, change the Namecheap nameservers to Vercel's and let Vercel manage DNS.
 
