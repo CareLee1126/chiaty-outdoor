@@ -64,15 +64,6 @@ export const products = [
     "image": "/assets/images/products/p28.jpg"
   },
   {
-    "id": "62329805555",
-    "name": "Folding Metal Beach Chair Trolley-Lightweight & Durable Modern Design for Outdoor Park Use",
-    "category": "Beach Chair",
-    "priceMin": 29.9,
-    "priceMax": 33,
-    "priceLabel": "$29.90 - $33.00",
-    "image": "/assets/images/products/p30.jpg"
-  },
-  {
     "id": "62330009581",
     "name": "Portable Waterproof Legless Sea Beach Mat Chair",
     "category": "Beach Chair",
@@ -80,15 +71,6 @@ export const products = [
     "priceMax": 4.2,
     "priceLabel": "$3.70 - $4.20",
     "image": "/assets/images/products/p33.jpg"
-  },
-  {
-    "id": "62330138658",
-    "name": "Collapsible Sturdy Light Weight Portable Wide Wheels Metal Shopping Wagon Folding Beach Trolley Cart Gym",
-    "category": "Beach Chair",
-    "priceMin": 23.5,
-    "priceMax": 25.8,
-    "priceLabel": "$23.50 - $25.80",
-    "image": "/assets/images/products/p36.jpg"
   },
   {
     "id": "62330758389",
@@ -449,6 +431,24 @@ export const products = [
     "priceMax": 1.8,
     "priceLabel": "$1.30 - $1.80",
     "image": "/assets/images/products/p31.jpg"
+  },
+  {
+    "id": "62329805555",
+    "name": "Folding Metal Beach Chair Trolley-Lightweight & Durable Modern Design for Outdoor Park Use",
+    "category": "Wagon Cart",
+    "priceMin": 29.9,
+    "priceMax": 33,
+    "priceLabel": "$29.90 - $33.00",
+    "image": "/assets/images/products/p30.jpg"
+  },
+  {
+    "id": "62330138658",
+    "name": "Collapsible Sturdy Light Weight Portable Wide Wheels Metal Shopping Wagon Folding Beach Trolley Cart Gym",
+    "category": "Wagon Cart",
+    "priceMin": 23.5,
+    "priceMax": 25.8,
+    "priceLabel": "$23.50 - $25.80",
+    "image": "/assets/images/products/p36.jpg"
   }
 ];
 
@@ -458,5 +458,6 @@ export const categories = [
   "Camping Chair",
   "Director Chair",
   "Folding Table",
-  "Fishing Chair"
+  "Fishing Chair",
+  "Wagon Cart"
 ];
