@@ -118,6 +118,15 @@ export const products = [
     "image": "/assets/images/products/p47.jpg"
   },
   {
+    "id": "62015004831",
+    "name": "Lightweight Leisure Folding Aluminum Sea Beach Chair Fishing Chair Outdoor Beach Metal Opp Bag 120-150kgs Easy-carrying 100pcs",
+    "category": "Beach Chair",
+    "priceMin": 11.9,
+    "priceMax": 12.5,
+    "priceLabel": "$11.90 - $12.50",
+    "image": "/assets/images/products/p3.jpg"
+  },
+  {
     "id": "62329567699",
     "name": "Padded Steel Foldable Portable Heavy Duty Brazilian Giant Canopy Elderly Reclining Sun Umbrella Footrest Beach Chair with Wheels",
     "category": "Folding Bed",
@@ -271,6 +280,15 @@ export const products = [
     "image": "/assets/images/products/p46.jpg"
   },
   {
+    "id": "62319367801",
+    "name": "Custom Lightweight Wholesale Fabric Beach Comfortable Gym Fishing Material Compact High Quality Collapsible Outdoor Folding",
+    "category": "Camping Chair",
+    "priceMin": 11.5,
+    "priceMax": 100,
+    "priceLabel": "$11.50 - $100.00",
+    "image": "/assets/images/products/p4.jpeg"
+  },
+  {
     "id": "62328999011",
     "name": "Aluminum Modern Light Weight Comfortable Portable Foldable Sublimation Printed Eco-Friendly Beach Chair Side Table for Park Use",
     "category": "Director Chair",
@@ -404,24 +422,6 @@ export const products = [
     "priceMax": 6.3,
     "priceLabel": "$5.90 - $6.30",
     "image": "/assets/images/products/p10.jpg"
-  },
-  {
-    "id": "62015004831",
-    "name": "Lightweight Leisure Folding Aluminum Sea Beach Chair Fishing Chair Outdoor Beach Metal Opp Bag 120-150kgs Easy-carrying 100pcs",
-    "category": "Fishing Chair",
-    "priceMin": 11.9,
-    "priceMax": 12.5,
-    "priceLabel": "$11.90 - $12.50",
-    "image": "/assets/images/products/p3.jpg"
-  },
-  {
-    "id": "62319367801",
-    "name": "Custom Lightweight Wholesale Fabric Beach Comfortable Gym Fishing Material Compact High Quality Collapsible Outdoor Folding",
-    "category": "Fishing Chair",
-    "priceMin": 11.5,
-    "priceMax": 100,
-    "priceLabel": "$11.50 - $100.00",
-    "image": "/assets/images/products/p4.jpeg"
   },
   {
     "id": "62329951995",
