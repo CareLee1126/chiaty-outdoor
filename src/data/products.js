@@ -55,6 +55,33 @@ export const products = [
     "image": "/assets/images/products/p48.jpg"
   },
   {
+    "id": "62324292684",
+    "name": "Used Outdoor Light Weight Portable Metal Folding Recliner Zero Gravity Chair High Backrest Footrest for Camping Park Bedroom",
+    "category": "Beach Chair",
+    "priceMin": 8.9,
+    "priceMax": 9.8,
+    "priceLabel": "$8.90 - $9.80",
+    "image": "/assets/images/products/p16.jpg"
+  },
+  {
+    "id": "62326222108",
+    "name": "Leisure Low Deck Metal Lightweight Camping Fabric Wholesale Portable Outdoor Personalized Cheap Comfortable Eco-Friendly Lounge",
+    "category": "Beach Chair",
+    "priceMin": 12.5,
+    "priceMax": 14.5,
+    "priceLabel": "$12.50 - $14.50",
+    "image": "/assets/images/products/p19.jpg"
+  },
+  {
+    "id": "62330510567",
+    "name": "Deluxe Senior Stainless Steel Lightweight Portable Modern Height Adjustable Garden Lounge Folding Zero Gravity Bedroom Park",
+    "category": "Beach Chair",
+    "priceMin": 12.5,
+    "priceMax": 14.5,
+    "priceLabel": "$12.50 - $14.50",
+    "image": "/assets/images/products/p42.png"
+  },
+  {
     "id": "62324193889",
     "name": "Outdoor Elderly Sleeping Tall Lawn Durable Lightweight Iron Folding Beach Lounge Reclining Chair",
     "category": "Folding Bed",
@@ -199,15 +226,6 @@ export const products = [
     "image": "/assets/images/products/p50.jpg"
   },
   {
-    "id": "62324292684",
-    "name": "Used Outdoor Light Weight Portable Metal Folding Recliner Zero Gravity Chair High Backrest Footrest for Camping Park Bedroom",
-    "category": "Camping Chair",
-    "priceMin": 8.9,
-    "priceMax": 9.8,
-    "priceLabel": "$8.90 - $9.80",
-    "image": "/assets/images/products/p16.jpg"
-  },
-  {
     "id": "62324587636",
     "name": "Modern Outdoor Custom Fold Double Seat 2 Person Iron Metal Umbrella Canopy Camping Folding Chair Set Light Weight Portable Park",
     "category": "Camping Chair",
@@ -215,15 +233,6 @@ export const products = [
     "priceMax": 8.8,
     "priceLabel": "$8.30 - $8.80",
     "image": "/assets/images/products/p17.jpg"
-  },
-  {
-    "id": "62326222108",
-    "name": "Leisure Low Deck Metal Lightweight Camping Fabric Wholesale Portable Outdoor Personalized Cheap Comfortable Eco-Friendly Lounge",
-    "category": "Camping Chair",
-    "priceMin": 12.5,
-    "priceMax": 14.5,
-    "priceLabel": "$12.50 - $14.50",
-    "image": "/assets/images/products/p19.jpg"
   },
   {
     "id": "62329437716",
@@ -260,15 +269,6 @@ export const products = [
     "priceMax": 8.2,
     "priceLabel": "$7.60 - $8.20",
     "image": "/assets/images/products/p41.jpg"
-  },
-  {
-    "id": "62330510567",
-    "name": "Deluxe Senior Stainless Steel Lightweight Portable Modern Height Adjustable Garden Lounge Folding Zero Gravity Bedroom Park",
-    "category": "Camping Chair",
-    "priceMin": 12.5,
-    "priceMax": 14.5,
-    "priceLabel": "$12.50 - $14.50",
-    "image": "/assets/images/products/p42.png"
   },
   {
     "id": "62331103216",
