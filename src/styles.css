@@ -142,6 +142,34 @@ h1, h2, h3 { margin: 0; }
 .badge { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 7px; border: 1px solid var(--border-strong); color: var(--muted); }
 .prod-actions { display: flex; gap: 8px; margin-top: 4px; }
 .prod-actions .btn { flex: 1; justify-content: center; padding: 11px 10px; font-size: 11px; }
+.prod-media { display: block; cursor: pointer; }
+.prod-name a { transition: color 0.2s; }
+.prod-name a:hover { color: var(--accent); }
+
+/* ---------- product detail ---------- */
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.detail-media { border: 1.5px solid var(--ink); background: #fff; overflow: hidden; }
+.detail-media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1/1; }
+.detail-info { padding-top: 4px; }
+.detail-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.0; font-size: clamp(26px, 3.6vw, 44px); }
+.detail-price { font-family: var(--font-display); font-weight: 700; font-size: 40px; color: var(--accent); margin-top: 18px; }
+.detail-price-unit { font-family: var(--font-mono); font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+.detail-desc { color: var(--muted); font-size: 17px; line-height: 1.7; }
+.detail-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 24px; }
+.detail-assurances { list-style: none; padding: 22px 0 0; margin: 0; border-top: 1px solid var(--border); display: grid; gap: 12px; }
+.detail-assurances li { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+.detail-assurances svg { color: var(--forest); flex: none; }
+.detail-specs { margin-top: 72px; }
+.spec-table { width: 100%; border-collapse: collapse; border: 1.5px solid var(--ink); background: var(--paper); }
+.spec-table th, .spec-table td { text-align: left; padding: 15px 20px; border-bottom: 1px solid var(--border); font-size: 15px; vertical-align: top; }
+.spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: none; }
+.spec-table th { width: 34%; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); font-weight: 400; background: rgba(26,26,26,0.03); }
+.spec-table td { font-weight: 500; }
+
+@media (max-width: 860px) {
+  .detail-grid { grid-template-columns: 1fr; gap: 24px; }
+  .detail-specs { margin-top: 48px; }
+}
 
 /* ---------- featured ---------- */
 .featured { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; border: 1.5px solid var(--ink); background: var(--forest); color: var(--paper); }
