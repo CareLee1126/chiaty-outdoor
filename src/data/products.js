@@ -154,6 +154,15 @@ export const products = [
     "image": "/assets/images/products/p40.jpg"
   },
   {
+    "id": "62329437716",
+    "name": "Lightweight Portable Metal Folding Webbed UV Resistant Lawn Chaise Sun Lounge Chair for Outdoor Park & Villa Use",
+    "category": "Folding Bed",
+    "priceMin": 14.2,
+    "priceMax": 14.8,
+    "priceLabel": "$14.20 - $14.80",
+    "image": "/assets/images/products/p27.jpg"
+  },
+  {
     "id": "62324169808",
     "name": "Outdoor Portable Metal Modern Baby Kids Small Purple Cup Holder Child Animal Print Folding Camping Beach Chair Canopy for Park",
     "category": "Camping Chair",
@@ -233,15 +242,6 @@ export const products = [
     "priceMax": 8.8,
     "priceLabel": "$8.30 - $8.80",
     "image": "/assets/images/products/p17.jpg"
-  },
-  {
-    "id": "62329437716",
-    "name": "Lightweight Portable Metal Folding Webbed UV Resistant Lawn Chaise Sun Lounge Chair for Outdoor Park & Villa Use",
-    "category": "Camping Chair",
-    "priceMin": 14.2,
-    "priceMax": 14.8,
-    "priceLabel": "$14.20 - $14.80",
-    "image": "/assets/images/products/p27.jpg"
   },
   {
     "id": "62329954396",
