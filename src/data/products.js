@@ -28,15 +28,6 @@ export const products = [
     "image": "/assets/images/products/p7.jpg"
   },
   {
-    "id": "62324193889",
-    "name": "Outdoor Elderly Sleeping Tall Lawn Durable Lightweight Iron Folding Beach Lounge Reclining Chair",
-    "category": "Beach Chair",
-    "priceMin": 14.2,
-    "priceMax": 14.8,
-    "priceLabel": "$14.20 - $14.80",
-    "image": "/assets/images/products/p15.jpg"
-  },
-  {
     "id": "62327373721",
     "name": "Head Sea Backrest Custom Camping Lightweight Durable Outdoor Reclining Cheap Lounge Backpack Folding Iron Beach Chair",
     "category": "Beach Chair",
@@ -44,24 +35,6 @@ export const products = [
     "priceMax": 10.5,
     "priceLabel": "$9.90 - $10.50",
     "image": "/assets/images/products/p20.jpg"
-  },
-  {
-    "id": "62327907136",
-    "name": "Metal Frame Lightweight Chaise Sun Camping Mat Low Seat Lounge Cushion Portable Backpack Foldable Beach Chair",
-    "category": "Beach Chair",
-    "priceMin": 9.9,
-    "priceMax": 10.5,
-    "priceLabel": "$9.90 - $10.50",
-    "image": "/assets/images/products/p21.jpg"
-  },
-  {
-    "id": "62329567699",
-    "name": "Padded Steel Foldable Portable Heavy Duty Brazilian Giant Canopy Elderly Reclining Sun Umbrella Footrest Beach Chair with Wheels",
-    "category": "Beach Chair",
-    "priceMin": 11.5,
-    "priceMax": 12.5,
-    "priceLabel": "$11.50 - $12.50",
-    "image": "/assets/images/products/p28.jpg"
   },
   {
     "id": "62330009581",
@@ -73,9 +46,45 @@ export const products = [
     "image": "/assets/images/products/p33.jpg"
   },
   {
+    "id": "62331147027",
+    "name": "Modern Metal Portable Folding Beach Chair with Cabriole Legs Easy Carry Kids Animal Design Japanese Style Park Use",
+    "category": "Beach Chair",
+    "priceMin": 3.7,
+    "priceMax": 4.2,
+    "priceLabel": "$3.70 - $4.20",
+    "image": "/assets/images/products/p48.jpg"
+  },
+  {
+    "id": "62324193889",
+    "name": "Outdoor Elderly Sleeping Tall Lawn Durable Lightweight Iron Folding Beach Lounge Reclining Chair",
+    "category": "Folding Bed",
+    "priceMin": 14.2,
+    "priceMax": 14.8,
+    "priceLabel": "$14.20 - $14.80",
+    "image": "/assets/images/products/p15.jpg"
+  },
+  {
+    "id": "62327907136",
+    "name": "Metal Frame Lightweight Chaise Sun Camping Mat Low Seat Lounge Cushion Portable Backpack Foldable Beach Chair",
+    "category": "Folding Bed",
+    "priceMin": 9.9,
+    "priceMax": 10.5,
+    "priceLabel": "$9.90 - $10.50",
+    "image": "/assets/images/products/p21.jpg"
+  },
+  {
+    "id": "62329567699",
+    "name": "Padded Steel Foldable Portable Heavy Duty Brazilian Giant Canopy Elderly Reclining Sun Umbrella Footrest Beach Chair with Wheels",
+    "category": "Folding Bed",
+    "priceMin": 11.5,
+    "priceMax": 12.5,
+    "priceLabel": "$11.50 - $12.50",
+    "image": "/assets/images/products/p28.jpg"
+  },
+  {
     "id": "62330758389",
     "name": "Chaise Travel Leisure Wholesales Outdoor Reclining Picnic Lightweight Aluminum Beach Lounge Steel Folding Chair with Wheel",
-    "category": "Beach Chair",
+    "category": "Folding Bed",
     "priceMin": 13.5,
     "priceMax": 14.2,
     "priceLabel": "$13.50 - $14.20",
@@ -84,20 +93,11 @@ export const products = [
   {
     "id": "62331132604",
     "name": "Pvc Relax Leisure Without Arms Low Bed Outdoor Lightweight Portable Beach Chaise Sun Lounge Chair Bed Folding Rocking Chair",
-    "category": "Beach Chair",
+    "category": "Folding Bed",
     "priceMin": 8.7,
     "priceMax": 9.3,
     "priceLabel": "$8.70 - $9.30",
     "image": "/assets/images/products/p47.jpg"
-  },
-  {
-    "id": "62331147027",
-    "name": "Modern Metal Portable Folding Beach Chair with Cabriole Legs Easy Carry Kids Animal Design Japanese Style Park Use",
-    "category": "Beach Chair",
-    "priceMin": 3.7,
-    "priceMax": 4.2,
-    "priceLabel": "$3.70 - $4.20",
-    "image": "/assets/images/products/p48.jpg"
   },
   {
     "id": "62319391852",
