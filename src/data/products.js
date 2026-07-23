@@ -64,15 +64,6 @@ export const products = [
     "image": "/assets/images/products/p21.jpg"
   },
   {
-    "id": "62328999011",
-    "name": "Aluminum Modern Light Weight Comfortable Portable Foldable Sublimation Printed Eco-Friendly Beach Chair Side Table for Park Use",
-    "category": "Beach Chair",
-    "priceMin": 11.6,
-    "priceMax": 12.3,
-    "priceLabel": "$11.60 - $12.30",
-    "image": "/assets/images/products/p25.jpg"
-  },
-  {
     "id": "62329567699",
     "name": "Padded Steel Foldable Portable Heavy Duty Brazilian Giant Canopy Elderly Reclining Sun Umbrella Footrest Beach Chair with Wheels",
     "category": "Beach Chair",
@@ -134,15 +125,6 @@ export const products = [
     "priceMax": 4.2,
     "priceLabel": "$3.70 - $4.20",
     "image": "/assets/images/products/p48.jpg"
-  },
-  {
-    "id": "62331446681",
-    "name": "Hunting Outdoor Canvas Metal Beach Light Weight Iron Portable Comfortable Banquate Table Writing Folding Makeup Chair Padded",
-    "category": "Beach Chair",
-    "priceMin": 11.6,
-    "priceMax": 12.3,
-    "priceLabel": "$11.60 - $12.30",
-    "image": "/assets/images/products/p49.jpg"
   },
   {
     "id": "62319391852",
@@ -323,6 +305,24 @@ export const products = [
     "priceMax": 7.8,
     "priceLabel": "$6.90 - $7.80",
     "image": "/assets/images/products/p46.jpg"
+  },
+  {
+    "id": "62328999011",
+    "name": "Aluminum Modern Light Weight Comfortable Portable Foldable Sublimation Printed Eco-Friendly Beach Chair Side Table for Park Use",
+    "category": "Director Chair",
+    "priceMin": 11.6,
+    "priceMax": 12.3,
+    "priceLabel": "$11.60 - $12.30",
+    "image": "/assets/images/products/p25.jpg"
+  },
+  {
+    "id": "62331446681",
+    "name": "Hunting Outdoor Canvas Metal Beach Light Weight Iron Portable Comfortable Banquate Table Writing Folding Makeup Chair Padded",
+    "category": "Director Chair",
+    "priceMin": 11.6,
+    "priceMax": 12.3,
+    "priceLabel": "$11.60 - $12.30",
+    "image": "/assets/images/products/p49.jpg"
   },
   {
     "id": "62319729752",
