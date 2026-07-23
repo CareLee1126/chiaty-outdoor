@@ -37,15 +37,6 @@ export const products = [
     "image": "/assets/images/products/p10.jpg"
   },
   {
-    "id": "62324169808",
-    "name": "Outdoor Portable Metal Modern Baby Kids Small Purple Cup Holder Child Animal Print Folding Camping Beach Chair Canopy for Park",
-    "category": "Beach Chair",
-    "priceMin": 3.7,
-    "priceMax": 4.2,
-    "priceLabel": "$3.70 - $4.20",
-    "image": "/assets/images/products/p13.jpg"
-  },
-  {
     "id": "62324193889",
     "name": "Outdoor Elderly Sleeping Tall Lawn Durable Lightweight Iron Folding Beach Lounge Reclining Chair",
     "category": "Beach Chair",
@@ -73,24 +64,6 @@ export const products = [
     "image": "/assets/images/products/p21.jpg"
   },
   {
-    "id": "62328040808",
-    "name": "Balcony Large Padded Cot Elderly Outdoor Modern Round Lightweight Foldable Ultralight Metal Beach Camping Chair Park",
-    "category": "Beach Chair",
-    "priceMin": 15.9,
-    "priceMax": 16.8,
-    "priceLabel": "$15.90 - $16.80",
-    "image": "/assets/images/products/p22.jpg"
-  },
-  {
-    "id": "62328437372",
-    "name": "Red Small Round Folding Beach Chair Portable Without Arms for Camping Gym & Bedroom Use",
-    "category": "Beach Chair",
-    "priceMin": 8.7,
-    "priceMax": 9.3,
-    "priceLabel": "$8.70 - $9.30",
-    "image": "/assets/images/products/p23.jpg"
-  },
-  {
     "id": "62328999011",
     "name": "Aluminum Modern Light Weight Comfortable Portable Foldable Sublimation Printed Eco-Friendly Beach Chair Side Table for Park Use",
     "category": "Beach Chair",
@@ -100,15 +73,6 @@ export const products = [
     "image": "/assets/images/products/p25.jpg"
   },
   {
-    "id": "62329200566",
-    "name": "Outdoor Light Weight Portable Oversized Elderly Relax Aluminum Folding Camping Beach Chair with Carry Bag for Park Use",
-    "category": "Beach Chair",
-    "priceMin": 11.6,
-    "priceMax": 12.3,
-    "priceLabel": "$11.60 - $12.30",
-    "image": "/assets/images/products/p26.png"
-  },
-  {
     "id": "62329567699",
     "name": "Padded Steel Foldable Portable Heavy Duty Brazilian Giant Canopy Elderly Reclining Sun Umbrella Footrest Beach Chair with Wheels",
     "category": "Beach Chair",
@@ -116,15 +80,6 @@ export const products = [
     "priceMax": 12.5,
     "priceLabel": "$11.50 - $12.50",
     "image": "/assets/images/products/p28.jpg"
-  },
-  {
-    "id": "62329805492",
-    "name": "Giant Comfortable Light Weight Portable Foldable Camping Beach Chair with Sun Canopy for Park Use",
-    "category": "Beach Chair",
-    "priceMin": 6.9,
-    "priceMax": 7.5,
-    "priceLabel": "$6.90 - $7.50",
-    "image": "/assets/images/products/p29.jpg"
   },
   {
     "id": "62329805555",
@@ -145,15 +100,6 @@ export const products = [
     "image": "/assets/images/products/p33.jpg"
   },
   {
-    "id": "62330112268",
-    "name": "Metal Frame China Modern Outdoor Furniture Folding Low Seat Baby Kid's Beach Chair with Umbrella Attached",
-    "category": "Beach Chair",
-    "priceMin": 3.7,
-    "priceMax": 4.2,
-    "priceLabel": "$3.70 - $4.20",
-    "image": "/assets/images/products/p34.jpg"
-  },
-  {
     "id": "62330138658",
     "name": "Collapsible Sturdy Light Weight Portable Wide Wheels Metal Shopping Wagon Folding Beach Trolley Cart Gym",
     "category": "Beach Chair",
@@ -161,15 +107,6 @@ export const products = [
     "priceMax": 25.8,
     "priceLabel": "$23.50 - $25.80",
     "image": "/assets/images/products/p36.jpg"
-  },
-  {
-    "id": "62330251332",
-    "name": "Cheap Lightweight Portable Umbrella Sunshade 2 Person Double Cooler Folding Beach Camping Chair Attached Table Outdoor Furniture",
-    "category": "Beach Chair",
-    "priceMin": 14.2,
-    "priceMax": 14.8,
-    "priceLabel": "$14.20 - $14.80",
-    "image": "/assets/images/products/p39.jpg"
   },
   {
     "id": "62330758389",
@@ -208,15 +145,6 @@ export const products = [
     "image": "/assets/images/products/p49.jpg"
   },
   {
-    "id": "62331449271",
-    "name": "Yellow Durable Lightweight Foldable Metal Cat Baby Children Cartoon Kids Moon Chair for Beach & Park Use",
-    "category": "Beach Chair",
-    "priceMin": 8.7,
-    "priceMax": 9.3,
-    "priceLabel": "$8.70 - $9.30",
-    "image": "/assets/images/products/p50.jpg"
-  },
-  {
     "id": "62319391852",
     "name": "Folding Modern Metal Bunk Bed Steel Frame Adjustable Foldable Portable Single Outdoor Camping Bedroom Use",
     "category": "Folding Bed",
@@ -242,6 +170,78 @@ export const products = [
     "priceMax": 14.8,
     "priceLabel": "$14.20 - $14.80",
     "image": "/assets/images/products/p40.jpg"
+  },
+  {
+    "id": "62324169808",
+    "name": "Outdoor Portable Metal Modern Baby Kids Small Purple Cup Holder Child Animal Print Folding Camping Beach Chair Canopy for Park",
+    "category": "Camping Chair",
+    "priceMin": 3.7,
+    "priceMax": 4.2,
+    "priceLabel": "$3.70 - $4.20",
+    "image": "/assets/images/products/p13.jpg"
+  },
+  {
+    "id": "62328040808",
+    "name": "Balcony Large Padded Cot Elderly Outdoor Modern Round Lightweight Foldable Ultralight Metal Beach Camping Chair Park",
+    "category": "Camping Chair",
+    "priceMin": 15.9,
+    "priceMax": 16.8,
+    "priceLabel": "$15.90 - $16.80",
+    "image": "/assets/images/products/p22.jpg"
+  },
+  {
+    "id": "62328437372",
+    "name": "Red Small Round Folding Beach Chair Portable Without Arms for Camping Gym & Bedroom Use",
+    "category": "Camping Chair",
+    "priceMin": 8.7,
+    "priceMax": 9.3,
+    "priceLabel": "$8.70 - $9.30",
+    "image": "/assets/images/products/p23.jpg"
+  },
+  {
+    "id": "62329200566",
+    "name": "Outdoor Light Weight Portable Oversized Elderly Relax Aluminum Folding Camping Beach Chair with Carry Bag for Park Use",
+    "category": "Camping Chair",
+    "priceMin": 11.6,
+    "priceMax": 12.3,
+    "priceLabel": "$11.60 - $12.30",
+    "image": "/assets/images/products/p26.png"
+  },
+  {
+    "id": "62329805492",
+    "name": "Giant Comfortable Light Weight Portable Foldable Camping Beach Chair with Sun Canopy for Park Use",
+    "category": "Camping Chair",
+    "priceMin": 6.9,
+    "priceMax": 7.5,
+    "priceLabel": "$6.90 - $7.50",
+    "image": "/assets/images/products/p29.jpg"
+  },
+  {
+    "id": "62330112268",
+    "name": "Metal Frame China Modern Outdoor Furniture Folding Low Seat Baby Kid's Beach Chair with Umbrella Attached",
+    "category": "Camping Chair",
+    "priceMin": 3.7,
+    "priceMax": 4.2,
+    "priceLabel": "$3.70 - $4.20",
+    "image": "/assets/images/products/p34.jpg"
+  },
+  {
+    "id": "62330251332",
+    "name": "Cheap Lightweight Portable Umbrella Sunshade 2 Person Double Cooler Folding Beach Camping Chair Attached Table Outdoor Furniture",
+    "category": "Camping Chair",
+    "priceMin": 14.2,
+    "priceMax": 14.8,
+    "priceLabel": "$14.20 - $14.80",
+    "image": "/assets/images/products/p39.jpg"
+  },
+  {
+    "id": "62331449271",
+    "name": "Yellow Durable Lightweight Foldable Metal Cat Baby Children Cartoon Kids Moon Chair for Beach & Park Use",
+    "category": "Camping Chair",
+    "priceMin": 8.7,
+    "priceMax": 9.3,
+    "priceLabel": "$8.70 - $9.30",
+    "image": "/assets/images/products/p50.jpg"
   },
   {
     "id": "62324292684",
