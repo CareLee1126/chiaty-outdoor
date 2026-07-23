@@ -271,15 +271,6 @@ export const products = [
     "image": "/assets/images/products/p38.jpg"
   },
   {
-    "id": "62331103216",
-    "name": "Camping Rotomolded Heat Preservation 60L Folding Portable Leakproof Cooler with Stand and Travel Bag",
-    "category": "Camping Chair",
-    "priceMin": 6.9,
-    "priceMax": 7.8,
-    "priceLabel": "$6.90 - $7.80",
-    "image": "/assets/images/products/p46.jpg"
-  },
-  {
     "id": "62319367801",
     "name": "Custom Lightweight Wholesale Fabric Beach Comfortable Gym Fishing Material Compact High Quality Collapsible Outdoor Folding",
     "category": "Camping Chair",
@@ -449,6 +440,15 @@ export const products = [
     "priceMax": 25.8,
     "priceLabel": "$23.50 - $25.80",
     "image": "/assets/images/products/p36.jpg"
+  },
+  {
+    "id": "62331103216",
+    "name": "Camping Rotomolded Heat Preservation 60L Folding Portable Leakproof Cooler with Stand and Travel Bag",
+    "category": "Coolers",
+    "priceMin": 6.9,
+    "priceMax": 7.8,
+    "priceLabel": "$6.90 - $7.80",
+    "image": "/assets/images/products/p46.jpg"
   }
 ];
 
@@ -459,5 +459,6 @@ export const categories = [
   "Director Chair",
   "Folding Table",
   "Fishing Chair",
-  "Wagon Cart"
+  "Wagon Cart",
+  "Coolers"
 ];
