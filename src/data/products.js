@@ -1,6 +1,15 @@
 // Auto-generated from Chiaty store product data. Do not hand-edit.
 export const products = [
   {
+    "id": "ct-302",
+    "name": "CT-302 Folding Camping Chair with Mesh Cup Holder & Carry Bag",
+    "category": "Camping Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Contact for price",
+    "image": "/assets/images/products/ct302_1.jpg"
+  },
+  {
     "id": "62014654854",
     "name": "High Seat Cushion Adjustable Beach Chair Wholesale",
     "category": "Beach Chair",

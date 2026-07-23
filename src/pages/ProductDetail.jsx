@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight, Check } from 'lucide-react';
 import { products } from '../data/products';
+import { productOverrides } from '../data/productOverrides';
 import ProductCard from '../components/ProductCard';
 import { getSpecs, getTags, getDescription, DETAIL_NOTE } from '../data/productDetails';
 
 export default function ProductDetail() {
   const { id } = useParams();
   const product = products.find((p) => p.id === id);
+  const override = product ? productOverrides[product.id] : null;
+
+  const gallery = override?.gallery?.length ? override.gallery : product ? [product.image] : [];
+  const [active, setActive] = useState(0);
+  useEffect(() => { setActive(0); }, [id]);
 
   if (!product) {
     return (
@@ -24,9 +30,11 @@ export default function ProductDetail() {
     );
   }
 
-  const specs = getSpecs(product);
+  const specs = override?.specs?.length ? override.specs : getSpecs(product);
   const tags = getTags(product.name);
-  const description = getDescription(product);
+  const description = override?.description || getDescription(product);
+  const detailImages = override?.detailImages || [];
+  const hasPrice = product.priceMin != null;
   const quoteHref = `/contact?product=${encodeURIComponent(product.name)}`;
 
   const related = products
@@ -46,17 +54,38 @@ export default function ProductDetail() {
       <section className="section" style={{ paddingTop: 28 }}>
         <div className="container">
           <div className="detail-grid">
-            {/* MEDIA */}
-            <div className="detail-media">
-              <img src={product.image} alt={product.name} />
+            {/* MEDIA + GALLERY */}
+            <div className="detail-gallery">
+              <div className="detail-media">
+                <img src={gallery[active]} alt={product.name} />
+              </div>
+              {gallery.length > 1 && (
+                <div className="detail-thumbs">
+                  {gallery.map((src, i) => (
+                    <button
+                      key={src}
+                      className={`detail-thumb ${i === active ? 'active' : ''}`}
+                      onClick={() => setActive(i)}
+                      aria-label={`View image ${i + 1}`}
+                    >
+                      <img src={src} alt={`${product.name} view ${i + 1}`} loading="lazy" />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* INFO */}
             <div className="detail-info">
               <div className="prod-cat" style={{ marginBottom: 10 }}>{product.category}</div>
+              {override?.itemNo && <div className="detail-itemno mono">Item No. {override.itemNo}</div>}
               <h1 className="detail-title">{product.name}</h1>
 
-              <div className="detail-price">{product.priceLabel}<span className="detail-price-unit"> / piece</span></div>
+              {hasPrice ? (
+                <div className="detail-price">{product.priceLabel}<span className="detail-price-unit"> / piece</span></div>
+              ) : (
+                <div className="detail-price" style={{ fontSize: 28 }}>Request wholesale quote</div>
+              )}
 
               <div className="badges" style={{ margin: '18px 0 22px' }}>
                 {tags.map((t) => (
@@ -93,8 +122,17 @@ export default function ProductDetail() {
                 ))}
               </tbody>
             </table>
-            <p className="form-note" style={{ marginTop: 14 }}>{DETAIL_NOTE}</p>
+            {!override && <p className="form-note" style={{ marginTop: 14 }}>{DETAIL_NOTE}</p>}
           </div>
+
+          {/* IN-PAGE DETAIL IMAGES */}
+          {detailImages.length > 0 && (
+            <div className="detail-images">
+              {detailImages.map((src, i) => (
+                <img key={src} src={src} alt={`${product.name} detail ${i + 1}`} loading="lazy" />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
