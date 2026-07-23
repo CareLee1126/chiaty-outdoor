@@ -11,7 +11,7 @@ function catThumb(cat) {
   return p ? p.image : '/assets/images/products/p1.jpg';
 }
 
-const featuredCats = ['Beach Chairs', 'Loungers & Recliners', 'Outdoor Tables'];
+const featuredCats = ['Beach Chair', 'Camping Chair', 'Folding Table'];
 
 export default function Home() {
   const featured = products.find((p) => p.priceMax && p.priceMax >= 15) || products[0];
