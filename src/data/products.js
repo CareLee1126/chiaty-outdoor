@@ -28,15 +28,6 @@ export const products = [
     "image": "/assets/images/products/p7.jpg"
   },
   {
-    "id": "62321081175",
-    "name": "Portable Lightweight Iron Frame Foldable Children Kids Folding Cooler Camping Beach Chair with Shoulder Strap",
-    "category": "Beach Chair",
-    "priceMin": 5.9,
-    "priceMax": 6.3,
-    "priceLabel": "$5.90 - $6.30",
-    "image": "/assets/images/products/p10.jpg"
-  },
-  {
     "id": "62324193889",
     "name": "Outdoor Elderly Sleeping Tall Lawn Durable Lightweight Iron Folding Beach Lounge Reclining Chair",
     "category": "Beach Chair",
@@ -422,6 +413,15 @@ export const products = [
     "priceMax": 14.8,
     "priceLabel": "$14.10 - $14.80",
     "image": "/assets/images/products/p37.jpg"
+  },
+  {
+    "id": "62321081175",
+    "name": "Portable Lightweight Iron Frame Foldable Children Kids Folding Cooler Camping Beach Chair with Shoulder Strap",
+    "category": "Fishing Chair",
+    "priceMin": 5.9,
+    "priceMax": 6.3,
+    "priceLabel": "$5.90 - $6.30",
+    "image": "/assets/images/products/p10.jpg"
   },
   {
     "id": "62015004831",
