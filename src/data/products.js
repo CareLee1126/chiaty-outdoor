@@ -262,15 +262,6 @@ export const products = [
     "image": "/assets/images/products/p38.jpg"
   },
   {
-    "id": "62330412372",
-    "name": "Mini Modern Stainless Steel Camping Chair Table Set-Comfortable Foldable Portable Outdoor Furniture for Camping & Warehouse Use",
-    "category": "Camping Chair",
-    "priceMin": 7.6,
-    "priceMax": 8.2,
-    "priceLabel": "$7.60 - $8.20",
-    "image": "/assets/images/products/p41.jpg"
-  },
-  {
     "id": "62331103216",
     "name": "Camping Rotomolded Heat Preservation 60L Folding Portable Leakproof Cooler with Stand and Travel Bag",
     "category": "Camping Chair",
@@ -323,6 +314,15 @@ export const products = [
     "priceMax": 12.3,
     "priceLabel": "$11.60 - $12.30",
     "image": "/assets/images/products/p45.jpg"
+  },
+  {
+    "id": "62330412372",
+    "name": "Mini Modern Stainless Steel Camping Chair Table Set-Comfortable Foldable Portable Outdoor Furniture for Camping & Warehouse Use",
+    "category": "Folding Table",
+    "priceMin": 7.6,
+    "priceMax": 8.2,
+    "priceLabel": "$7.60 - $8.20",
+    "image": "/assets/images/products/p41.jpg"
   },
   {
     "id": "62014417398",
