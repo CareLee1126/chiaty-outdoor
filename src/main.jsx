@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
@@ -20,7 +20,15 @@ function ScrollToTop() {
 
 function AnalyticsPageView() {
   const { pathname, search } = useLocation();
+  const firstLoad = useRef(true);
   useEffect(() => {
+    // gtag('config') already sends the initial page_view on hard load.
+    // Skip the first render here so it is not counted twice; send a
+    // page_view only on subsequent client-side route changes.
+    if (firstLoad.current) {
+      firstLoad.current = false;
+      return;
+    }
     if (typeof window.gtag !== 'function') return;
     // Send only non-personal navigation data. Never include inquiry form fields.
     window.gtag('event', 'page_view', {
