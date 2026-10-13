@@ -18,10 +18,25 @@ function ScrollToTop() {
   return null;
 }
 
+function AnalyticsPageView() {
+  const { pathname, search } = useLocation();
+  useEffect(() => {
+    if (typeof window.gtag !== 'function') return;
+    // Send only non-personal navigation data. Never include inquiry form fields.
+    window.gtag('event', 'page_view', {
+      page_path: pathname + search,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }, [pathname, search]);
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <AnalyticsPageView />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
