@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, MessageCircle } from 'lucide-react';
 import Marquee from '../components/Marquee';
 import ProductCard from '../components/ProductCard';
 import { products, categories } from '../data/products';
 import { STATS, FACTORY_STATS } from '../data/company';
+import { GENERIC_MESSAGE, waHref, trackWhatsAppClick } from '../data/whatsapp';
 
 function catThumb(cat) {
   const p = products.find((x) => x.category === cat);
@@ -33,6 +34,15 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <Link to="/products" className="btn btn-accent">Browse Products <ArrowUpRight size={17} /></Link>
+            <a
+              href={waHref(GENERIC_MESSAGE)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-whatsapp"
+              onClick={() => trackWhatsAppClick('home_hero')}
+            >
+              <MessageCircle size={17} /> Get Quote on WhatsApp
+            </a>
             <Link to="/contact" className="btn btn-ghost" style={{ color: 'var(--paper)', borderColor: 'var(--paper)' }}>
               Request a Quote
             </Link>

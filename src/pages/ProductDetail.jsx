@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, Check } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Check, MessageCircle } from 'lucide-react';
 import { products } from '../data/products';
 import { productOverrides } from '../data/productOverrides';
+import { getItemNo } from '../data/itemNumbers';
 import ProductCard from '../components/ProductCard';
 import { getSpecs, getTags, getDescription, DETAIL_NOTE } from '../data/productDetails';
+import { productMessage, waHref, trackWhatsAppClick } from '../data/whatsapp';
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -30,12 +32,14 @@ export default function ProductDetail() {
     );
   }
 
-  const specs = override?.specs?.length ? override.specs : getSpecs(product);
+  const itemNo = getItemNo(product, override);
+  const specs = override?.specs?.length ? override.specs : getSpecs(product, itemNo);
   const tags = getTags(product.name);
   const description = override?.description || getDescription(product);
   const detailImages = override?.detailImages || [];
   const hasPrice = product.priceMin != null;
   const quoteHref = `/contact?product=${encodeURIComponent(product.name)}`;
+  const waMessage = productMessage(product.name, `/products/${product.id}`);
 
   const related = products
     .filter((p) => p.category === product.category && p.id !== product.id)
@@ -78,7 +82,7 @@ export default function ProductDetail() {
             {/* INFO */}
             <div className="detail-info">
               <div className="prod-cat" style={{ marginBottom: 10 }}>{product.category}</div>
-              {override?.itemNo && <div className="detail-itemno mono">Item No. {override.itemNo}</div>}
+              {itemNo && <div className="detail-itemno mono">Item No. {itemNo}</div>}
               <h1 className="detail-title">{product.name}</h1>
 
               {hasPrice ? (
@@ -97,6 +101,15 @@ export default function ProductDetail() {
 
               <div className="detail-actions">
                 <Link to={quoteHref} className="btn btn-accent">Request Quote <ArrowUpRight size={16} /></Link>
+                <a
+                  href={waHref(waMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
+                  onClick={() => trackWhatsAppClick('product_detail')}
+                >
+                  <MessageCircle size={16} /> Get Quote on WhatsApp
+                </a>
                 <Link to="/contact" className="btn btn-ghost">Contact Sales</Link>
               </div>
 

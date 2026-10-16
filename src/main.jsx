@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import About from './pages/About';
@@ -55,6 +56,7 @@ function App() {
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
+      <FloatingWhatsApp />
     </BrowserRouter>
   );
 }

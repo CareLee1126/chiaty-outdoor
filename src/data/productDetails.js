@@ -27,14 +27,16 @@ export function getFabric(name) {
 }
 
 // Build a spec table (label/value). Only includes rows we can back up.
-export function getSpecs(product) {
+export function getSpecs(product, itemNo) {
   const { name, category, priceLabel } = product;
-  const specs = [
+  const specs = [];
+  if (itemNo) specs.push({ k: 'Item No.', v: itemNo });
+  specs.push(
     { k: 'Category', v: category },
     { k: 'Frame material', v: getMaterial(name) },
     { k: 'Seat / surface', v: getFabric(name) },
     { k: 'Folding', v: has(name, 'fold', 'foldable', 'collapsible') ? 'Foldable / collapsible' : 'Portable' },
-  ];
+  );
 
   if (has(name, 'zero gravity')) specs.push({ k: 'Recline', v: 'Zero-gravity multi-position' });
   else if (has(name, 'reclin', 'adjustable')) specs.push({ k: 'Recline', v: 'Adjustable backrest' });

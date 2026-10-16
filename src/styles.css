@@ -134,7 +134,9 @@ h1, h2, h3 { margin: 0; }
 .prod-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease); }
 .prod-card:hover .prod-media img { transform: scale(1.05); }
 .prod-body { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.prod-cat-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .prod-cat { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.prod-itemno { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--border); padding: 2px 6px; white-space: nowrap; }
 .prod-name { font-size: 14px; font-weight: 600; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .prod-meta { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border); }
 .prod-price { font-family: var(--font-display); font-size: 22px; font-weight: 700; }
@@ -244,6 +246,19 @@ h1, h2, h3 { margin: 0; }
 .page-intro { padding: 70px 0 10px; }
 .page-intro .section-title { max-width: 24ch; }
 
+/* ---------- whatsapp ---------- */
+.btn-whatsapp { background: #25d366; color: #fff; border: 1.5px solid #25d366; }
+.btn-whatsapp:hover { background: #1ebe5a; border-color: #1ebe5a; color: #fff; }
+.prod-wa { width: 100%; justify-content: center; margin-top: 10px; }
+.wa-float {
+  position: fixed; right: 20px; bottom: 20px; z-index: 900;
+  display: inline-flex; align-items: center; gap: 9px;
+  background: #25d366; color: #fff; font-weight: 600; font-size: 15px;
+  padding: 13px 18px; border-radius: 999px; box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.wa-float:hover { background: #1ebe5a; color: #fff; transform: translateY(-2px); box-shadow: 0 8px 26px rgba(37,211,102,0.5); }
+
 /* ---------- responsive ---------- */
 @media (max-width: 1080px) {
   .prod-grid { grid-template-columns: repeat(3, 1fr); }
@@ -274,4 +289,5 @@ h1, h2, h3 { margin: 0; }
   .hero-stats { gap: 26px; }
   .split-body, .featured-body, .contact-info { padding: 32px 24px; }
   .tl-row { grid-template-columns: 84px 1fr; gap: 14px; }
+  .wa-float { right: 14px; bottom: 14px; padding: 12px 15px; font-size: 14px; }
 }
