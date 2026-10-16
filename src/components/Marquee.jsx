@@ -2,9 +2,9 @@ import React from 'react';
 
 const items = [
   'OEM / ODM Available',
-  'MOQ From 100 PCS',
+  'MOQ From 200 PCS',
   'Metal & Aluminum Frames',
-  '50+ Product Models',
+  '200+ Product Models',
   'Direct Factory Export',
   '7+ Years Manufacturing',
   'Custom Logo & Fabric',

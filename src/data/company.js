@@ -9,15 +9,15 @@ export const CONTACT = {
 
 export const STATS = [
   { num: '7+', lbl: 'Years Manufacturing' },
-  { num: '50+', lbl: 'Product Models' },
-  { num: '100', lbl: 'MOQ From (pcs)' },
+  { num: '200+', lbl: 'Product Models' },
+  { num: '200', lbl: 'MOQ From (pcs)' },
   { num: '24H', lbl: 'Inquiry Response' },
 ];
 
 export const FACTORY_STATS = [
   { k: 'Established', v: '2017' },
-  { k: 'Product Models', v: '50+' },
-  { k: 'Min. Order Qty', v: '100pcs' },
+  { k: 'Product Models', v: '200+' },
+  { k: 'Min. Order Qty', v: '200pcs' },
   { k: 'Main Materials', v: 'Aluminum · Steel · Oxford' },
   { k: 'Customization', v: 'OEM / ODM' },
 ];
@@ -33,7 +33,7 @@ export const TIMELINE = [
   { year: '2017', text: 'Chiaty Outdoor established in Jinhua as a dedicated folding-chair manufacturer.' },
   { year: '2019', text: 'Expanded into beach chairs, loungers, and outdoor table sets for export markets.' },
   { year: '2021', text: 'Scaled OEM/ODM capability with custom logo, fabric, and packaging programs.' },
-  { year: '2024', text: '50+ active models supplying importers and retail chains across global markets.' },
+  { year: '2024', text: '200+ active models supplying importers and retail chains across global markets.' },
 ];
 
 export const CERTS = ['ISO 9001', 'BSCI Audited', 'SGS Tested', 'CE Compliant'];
