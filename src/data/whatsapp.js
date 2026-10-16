@@ -1,6 +1,6 @@
 // WhatsApp quick-inquiry helper.
 // Number is in international wa.me format: country code + number, no "+" or spaces.
-export const WHATSAPP_NUMBER = '8613026211320';
+export const WHATSAPP_NUMBER = '8615826864369';
 
 const SITE_ORIGIN = 'https://www.chiatyoutdoor.com';
 

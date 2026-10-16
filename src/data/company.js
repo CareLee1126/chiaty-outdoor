@@ -2,7 +2,7 @@
 export const CONTACT = {
   email: 'andy@chiaty.com',
   phone: '+86 13026211320',
-  whatsapp: '+86 13026211320',
+  whatsapp: '+86 15826864369',
   address: 'Jinhua, Zhejiang, China',
   company: 'Jinhua Jiading Leisure Co., Ltd.',
 };
