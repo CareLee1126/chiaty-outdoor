@@ -7,7 +7,6 @@ const links = [
   { to: '/products', label: 'Products' },
   { to: '/factory-quality', label: 'Factory & Quality' },
   { to: '/buyer-guides', label: 'Buyer Guides' },
-  { to: '/about', label: 'Factory' },
   { to: '/contact', label: 'Contact' },
 ];
 
