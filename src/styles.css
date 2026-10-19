@@ -369,3 +369,52 @@ h1, h2, h3 { margin: 0; }
   .guide-grid { grid-template-columns: 1fr; }
   .guide-cta { padding: 28px 22px; }
 }
+
+/* ---------- factory & quality ---------- */
+.factory-video { position: relative; width: 100%; border-radius: 16px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; }
+.factory-video-el { width: 100%; height: 100%; display: block; object-fit: cover; background: #000; }
+.factory-video-cover { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: 0; cursor: pointer; background: #0d0d0d; }
+.factory-video-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.factory-video-play, .factory-entry-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; border-radius: 50%; background: rgba(184, 92, 56, 0.92); color: #fff; box-shadow: 0 8px 30px rgba(0,0,0,0.35); transition: transform .2s var(--ease), background .2s ease; }
+.factory-video-play { padding-left: 4px; }
+.factory-video-cover:hover .factory-video-play { transform: translate(-50%, -50%) scale(1.07); background: var(--accent); }
+
+.factory-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.factory-step { display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.factory-step-imgs { display: grid; grid-template-columns: 1fr; gap: 2px; background: var(--line); }
+.factory-step-imgs:has(> :nth-child(2)) { grid-template-columns: 1fr 1fr; }
+.factory-step-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #0d0d0d; }
+.factory-step-media img { width: 100%; height: 100%; object-fit: cover; }
+.factory-step-no { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; height: 28px; padding: 0 9px; font-size: 13px; font-weight: 700; color: #fff; background: rgba(45, 79, 30, 0.92); border-radius: 7px; margin-bottom: 12px; }
+.factory-step-body { padding: 22px; }
+.factory-step-title { font-size: 20px; line-height: 1.3; margin: 0 0 10px; }
+.factory-step-body p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.65; }
+
+.factory-capability { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+.factory-capability-media { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+.factory-capability-media img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
+
+.factory-qc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.factory-qc-item { margin: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.factory-qc-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.factory-qc-item figcaption { padding: 14px 18px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+
+.factory-entry { display: grid; grid-template-columns: 1.05fr 1fr; gap: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; transition: box-shadow .2s ease, transform .2s ease; }
+.factory-entry:hover { box-shadow: 0 20px 46px rgba(0,0,0,0.09); transform: translateY(-3px); }
+.factory-entry-media { position: relative; min-height: 300px; background: #0d0d0d; }
+.factory-entry-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.factory-entry-play { width: 64px; height: 64px; padding-left: 3px; }
+.factory-entry-body { padding: 40px 42px; display: flex; flex-direction: column; justify-content: center; }
+
+@media (max-width: 860px) {
+  .factory-steps { grid-template-columns: 1fr; }
+  .factory-qc-grid { grid-template-columns: repeat(2, 1fr); }
+  .factory-entry { grid-template-columns: 1fr; }
+  .factory-entry-media { min-height: 220px; aspect-ratio: 16 / 9; }
+  .factory-entry-body { padding: 30px 26px; }
+  .factory-capability { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 520px) {
+  .factory-qc-grid { grid-template-columns: 1fr; }
+  .factory-video-play, .factory-entry-play { width: 60px; height: 60px; }
+}

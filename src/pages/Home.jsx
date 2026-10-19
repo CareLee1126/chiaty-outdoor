@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, MessageCircle, Play } from 'lucide-react';
 import Marquee from '../components/Marquee';
 import ProductCard from '../components/ProductCard';
 import { products, categories } from '../data/products';
 import { STATS, FACTORY_STATS } from '../data/company';
 import { GENERIC_MESSAGE, waHref, trackWhatsAppClick } from '../data/whatsapp';
+import { factoryVideo } from '../data/factory';
 
 function catThumb(cat) {
   const p = products.find((x) => x.category === cat);
@@ -110,6 +111,33 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FACTORY & QUALITY ENTRY */}
+      <section className="section">
+        <div className="container">
+          <Link to="/factory-quality" className="factory-entry">
+            {factoryVideo.poster && (
+              <div className="factory-entry-media">
+                <img src={factoryVideo.poster} alt={factoryVideo.alt} loading="lazy" />
+                <span className="factory-entry-play"><Play size={26} fill="currentColor" /></span>
+              </div>
+            )}
+            <div className="factory-entry-body">
+              <div className="section-tag">Factory &amp; Quality</div>
+              <h2 className="section-title" style={{ fontSize: 'clamp(26px,4vw,40px)' }}>
+                See Our Factory &amp; Quality Process
+              </h2>
+              <p className="section-lede" style={{ fontSize: '16px', marginTop: '12px' }}>
+                Watch our full production line — from material inspection to final packaging — and
+                see how we build reliable outdoor furniture for wholesale and OEM/ODM projects.
+              </p>
+              <span className="btn btn-accent" style={{ marginTop: 18 }}>
+                Explore Our Factory <ArrowUpRight size={16} />
+              </span>
+            </div>
+          </Link>
         </div>
       </section>
 

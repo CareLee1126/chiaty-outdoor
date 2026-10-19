@@ -11,6 +11,7 @@ import ProductDetail from './pages/ProductDetail';
 import Contact from './pages/Contact';
 import BuyerGuides from './pages/BuyerGuides';
 import GuideArticle from './pages/GuideArticle';
+import FactoryQuality from './pages/FactoryQuality';
 import './styles.css';
 
 function ScrollToTop() {
@@ -55,6 +56,7 @@ function App() {
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/buyer-guides" element={<BuyerGuides />} />
         <Route path="/buyer-guides/:slug" element={<GuideArticle />} />
+        <Route path="/factory-quality" element={<FactoryQuality />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Home />} />
