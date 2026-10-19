@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, Check, MessageCircle, Mail } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Check, MessageCircle } from 'lucide-react';
 import { products } from '../data/products';
 import { productOverrides } from '../data/productOverrides';
 import { getItemNo } from '../data/itemNumbers';
 import ProductCard from '../components/ProductCard';
+import ProductInquiryForm from '../components/ProductInquiryForm';
 import { getSpecs, getTags, getDescription, DETAIL_NOTE } from '../data/productDetails';
 import { productMessage, waHref, trackWhatsAppClick } from '../data/whatsapp';
 import useSeo, { SITE_ORIGIN } from '../data/useSeo';
@@ -233,9 +234,6 @@ export default function ProductDetail() {
             <div className="detail-inquiry">
               <p>{inquiryPrompt}</p>
               <div className="detail-actions" style={{ marginTop: 18 }}>
-                <a href={emailQuoteHref} className="btn btn-accent">
-                  <Mail size={16} /> Email Us for a Quote
-                </a>
                 <a
                   href={waHref(waMessage)}
                   target="_blank"
@@ -246,9 +244,9 @@ export default function ProductDetail() {
                   <MessageCircle size={16} /> Get Quote on WhatsApp
                 </a>
               </div>
-              <p className="form-note" style={{ marginTop: 12 }}>
-                Clicking opens your email client addressed to {CONTACT.email}, pre-filled with this model and page link. Send the email to reach our sales team.
-              </p>
+              <div className="inquiry-form-wrap">
+                <ProductInquiryForm productName={product.name} productPath={`/products/${product.id}`} />
+              </div>
             </div>
           )}
 
