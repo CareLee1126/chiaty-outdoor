@@ -10,6 +10,24 @@ export const products = [
     "image": "/assets/images/products/ct302_1.jpg"
   },
   {
+    "id": "ct-311a",
+    "name": "Mesh Folding Camping Chair with Aluminum Frame – CT-311A",
+    "category": "Camping Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Request a quote",
+    "image": "/assets/images/products/ct311a_1.jpg"
+  },
+  {
+    "id": "ct-311b",
+    "name": "High Back Folding Camping Chair with Headrest – CT-311B",
+    "category": "Camping Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Request a quote",
+    "image": "/assets/images/products/ct311b_1.jpg"
+  },
+  {
     "id": "62014654854",
     "name": "High Seat Cushion Adjustable Beach Chair Wholesale",
     "category": "Beach Chair",

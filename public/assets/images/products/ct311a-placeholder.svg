@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="Product image pending">
+  <rect width="1000" height="1000" fill="#ece7df"/>
+  <rect x="2" y="2" width="996" height="996" fill="none" stroke="#c9c0b2" stroke-width="2" stroke-dasharray="10 8"/>
+  <g fill="#8a8072" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="500" y="470" font-size="46" font-weight="700" letter-spacing="2">CT-311A</text>
+    <text x="500" y="535" font-size="30">Product image pending</text>
+    <text x="500" y="585" font-size="22" fill="#a89e8e">Correct-spec photo to be supplied</text>
+  </g>
+</svg>

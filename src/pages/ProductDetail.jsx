@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, Check, MessageCircle } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Check, MessageCircle, Mail } from 'lucide-react';
 import { products } from '../data/products';
 import { productOverrides } from '../data/productOverrides';
 import { getItemNo } from '../data/itemNumbers';
 import ProductCard from '../components/ProductCard';
 import { getSpecs, getTags, getDescription, DETAIL_NOTE } from '../data/productDetails';
 import { productMessage, waHref, trackWhatsAppClick } from '../data/whatsapp';
+import useSeo, { SITE_ORIGIN } from '../data/useSeo';
+import { CONTACT } from '../data/company';
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -16,6 +18,35 @@ export default function ProductDetail() {
   const gallery = override?.gallery?.length ? override.gallery : product ? [product.image] : [];
   const [active, setActive] = useState(0);
   useEffect(() => { setActive(0); }, [id]);
+
+  // --- Per-product SEO (hook must run unconditionally, before any early return) ---
+  const seoTitle = override?.seoTitle || (product ? `${product.name} | Chiaty Outdoor` : 'Product not found | Chiaty Outdoor');
+  const seoDesc = override?.seoDescription || (override?.description || (product ? getDescription(product) : '')).slice(0, 320) || undefined;
+  const seoPath = product ? `/products/${product.id}` : '/products';
+  const jsonLd = product
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: product.name,
+          sku: getItemNo(product, override) || undefined,
+          category: product.category,
+          description: override?.description || getDescription(product),
+          brand: { '@type': 'Brand', name: 'Chiaty Outdoor' },
+          image: override?.imagePending ? undefined : SITE_ORIGIN + gallery[0],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_ORIGIN + '/' },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: SITE_ORIGIN + '/products' },
+            { '@type': 'ListItem', position: 3, name: product.name, item: SITE_ORIGIN + seoPath },
+          ],
+        },
+      ]
+    : [];
+  useSeo({ title: seoTitle, description: seoDesc, path: seoPath, jsonLd });
 
   if (!product) {
     return (
@@ -35,11 +66,31 @@ export default function ProductDetail() {
   const itemNo = getItemNo(product, override);
   const specs = override?.specs?.length ? override.specs : getSpecs(product, itemNo);
   const tags = getTags(product.name);
-  const description = override?.description || getDescription(product);
+  const description = override?.shortIntro || override?.description || getDescription(product);
   const detailImages = override?.detailImages || [];
+  const sellingPoints = override?.sellingPoints || [];
+  const quoteNote = override?.quoteNote;
+  const customizationNote = override?.customizationNote;
+  const inquiryPrompt = override?.inquiryPrompt;
+  const imagePending = override?.imagePending;
   const hasPrice = product.priceMin != null;
   const quoteHref = `/contact?product=${encodeURIComponent(product.name)}`;
   const waMessage = productMessage(product.name, `/products/${product.id}`);
+  const productUrl = `${SITE_ORIGIN}/products/${product.id}`;
+  const emailSubject = `Quote request — ${product.name}`;
+  const emailBody = [
+    `Product: ${product.name}`,
+    `Product page: ${productUrl}`,
+    '',
+    'Hello Chiaty Outdoor,',
+    'I would like to request a quote for this model. Please send MOQ, pricing, catalogue and lead time.',
+    '',
+    'My requirements:',
+    '- Order quantity:',
+    '- Destination country:',
+    '- Customization / branding:',
+  ].join('\n');
+  const emailQuoteHref = `mailto:${CONTACT.email}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
   const related = products
     .filter((p) => p.category === product.category && p.id !== product.id)
@@ -61,7 +112,7 @@ export default function ProductDetail() {
             {/* MEDIA + GALLERY */}
             <div className="detail-gallery">
               <div className="detail-media">
-                <img src={gallery[active]} alt={product.name} />
+                <img src={gallery[active]} alt={imagePending ? `${product.name} — product image pending` : product.name} />
               </div>
               {gallery.length > 1 && (
                 <div className="detail-thumbs">
@@ -91,6 +142,16 @@ export default function ProductDetail() {
                 <div className="detail-price" style={{ fontSize: 28 }}>Request wholesale quote</div>
               )}
 
+              {quoteNote && (
+                <div className="detail-quotebox">
+                  <div className="detail-quote-facts">
+                    {itemNo && <span><strong>MOQ:</strong> 200 pieces</span>}
+                    <span>OEM customization available</span>
+                  </div>
+                  <p>{quoteNote}</p>
+                </div>
+              )}
+
               <div className="badges" style={{ margin: '18px 0 22px' }}>
                 {tags.map((t) => (
                   <span className="badge" key={t}>{t}</span>
@@ -100,7 +161,11 @@ export default function ProductDetail() {
               <p className="detail-desc">{description}</p>
 
               <div className="detail-actions">
-                <Link to={quoteHref} className="btn btn-accent">Request Quote <ArrowUpRight size={16} /></Link>
+                {quoteNote ? (
+                  <a href={emailQuoteHref} className="btn btn-accent">Email Us for a Quote <ArrowUpRight size={16} /></a>
+                ) : (
+                  <Link to={quoteHref} className="btn btn-accent">Request Quote <ArrowUpRight size={16} /></Link>
+                )}
                 <a
                   href={waHref(waMessage)}
                   target="_blank"
@@ -121,6 +186,22 @@ export default function ProductDetail() {
             </div>
           </div>
 
+          {/* SELLING POINTS */}
+          {sellingPoints.length > 0 && (
+            <div className="detail-selling">
+              <div className="section-tag">Key features</div>
+              <h2 className="section-title" style={{ fontSize: 'clamp(26px,4vw,40px)', marginBottom: 24 }}>Product highlights</h2>
+              <ul className="selling-list">
+                {sellingPoints.map((s) => (
+                  <li key={s.h}>
+                    <Check size={16} />
+                    <div><strong>{s.h}:</strong> {s.p}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {/* SPECS */}
           <div className="detail-specs">
             <div className="section-tag">Specifications</div>
@@ -137,6 +218,39 @@ export default function ProductDetail() {
             </table>
             {!override && <p className="form-note" style={{ marginTop: 14 }}>{DETAIL_NOTE}</p>}
           </div>
+
+          {/* CUSTOMIZATION */}
+          {customizationNote && (
+            <div className="detail-custom">
+              <div className="section-tag">Customization</div>
+              <h2 className="section-title" style={{ fontSize: 'clamp(22px,3vw,32px)', marginBottom: 16 }}>OEM / ODM options</h2>
+              <p className="detail-desc" style={{ maxWidth: 760 }}>{customizationNote}</p>
+            </div>
+          )}
+
+          {/* INQUIRY PROMPT + EMAIL CTA */}
+          {inquiryPrompt && (
+            <div className="detail-inquiry">
+              <p>{inquiryPrompt}</p>
+              <div className="detail-actions" style={{ marginTop: 18 }}>
+                <a href={emailQuoteHref} className="btn btn-accent">
+                  <Mail size={16} /> Email Us for a Quote
+                </a>
+                <a
+                  href={waHref(waMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
+                  onClick={() => trackWhatsAppClick('product_detail')}
+                >
+                  <MessageCircle size={16} /> Get Quote on WhatsApp
+                </a>
+              </div>
+              <p className="form-note" style={{ marginTop: 12 }}>
+                Clicking opens your email client addressed to {CONTACT.email}, pre-filled with this model and page link. Send the email to reach our sales team.
+              </p>
+            </div>
+          )}
 
           {/* IN-PAGE DETAIL IMAGES */}
           {detailImages.length > 0 && (
