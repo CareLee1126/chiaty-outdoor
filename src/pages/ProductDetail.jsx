@@ -11,10 +11,14 @@ import { productMessage, waHref, trackWhatsAppClick } from '../data/whatsapp';
 import useSeo, { SITE_ORIGIN } from '../data/useSeo';
 import { CONTACT } from '../data/company';
 
+// New reference product pages — must render byte-identically to their launch.
+const LOCKED_IDS = new Set(['ct-311a', 'ct-311b']);
+
 export default function ProductDetail() {
   const { id } = useParams();
   const product = products.find((p) => p.id === id);
   const override = product ? productOverrides[product.id] : null;
+  const isLocked = product ? LOCKED_IDS.has(product.id) : false;
 
   const gallery = override?.gallery?.length ? override.gallery : product ? [product.image] : [];
   const [active, setActive] = useState(0);
@@ -134,13 +138,16 @@ export default function ProductDetail() {
             {/* INFO */}
             <div className="detail-info">
               <div className="prod-cat" style={{ marginBottom: 10 }}>{product.category}</div>
-              {itemNo && <div className="detail-itemno mono">Item No. {itemNo}</div>}
+              {itemNo && isLocked && <div className="detail-itemno mono">Item No. {itemNo}</div>}
               <h1 className="detail-title">{product.name}</h1>
+              {itemNo && !isLocked && <div className="detail-modelno mono">Model No.: {itemNo}</div>}
 
               {hasPrice ? (
                 <div className="detail-price">{product.priceLabel}<span className="detail-price-unit"> / piece</span></div>
-              ) : (
+              ) : isLocked ? (
                 <div className="detail-price" style={{ fontSize: 28 }}>Request wholesale quote</div>
+              ) : (
+                <div className="detail-price" style={{ fontSize: 24 }}>Contact Us for MOQ &amp; Pricing</div>
               )}
 
               {quoteNote && (
@@ -246,6 +253,35 @@ export default function ProductDetail() {
               </div>
               <div className="inquiry-form-wrap">
                 <ProductInquiryForm productName={product.name} productPath={`/products/${product.id}`} />
+              </div>
+            </div>
+          )}
+
+          {/* INQUIRY FORM for all other products (reuses the same component) */}
+          {!inquiryPrompt && (
+            <div className="detail-inquiry">
+              <p>
+                Interested in {product.name}
+                {itemNo ? ` (Model No.: ${itemNo})` : ''}? Send us your order quantity,
+                destination and customization requirements to request a quote.
+              </p>
+              <div className="detail-actions" style={{ marginTop: 18 }}>
+                <a
+                  href={waHref(waMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
+                  onClick={() => trackWhatsAppClick('product_detail')}
+                >
+                  <MessageCircle size={16} /> Get Quote on WhatsApp
+                </a>
+              </div>
+              <div className="inquiry-form-wrap">
+                <ProductInquiryForm
+                  productName={product.name}
+                  productPath={`/products/${product.id}`}
+                  modelNo={itemNo}
+                />
               </div>
             </div>
           )}

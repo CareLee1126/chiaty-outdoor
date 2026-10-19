@@ -235,6 +235,7 @@ h1, h2, h3 { margin: 0; }
 .detail-info { padding-top: 4px; }
 .detail-itemno { color: var(--accent); margin-bottom: 8px; }
 .detail-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.0; font-size: clamp(26px, 3.6vw, 44px); }
+.detail-modelno { display: inline-block; margin-top: 12px; padding: 5px 12px; font-size: 14px; font-weight: 600; color: var(--ink); background: var(--sand, #f1ebe1); border: 1px solid var(--line); border-radius: 8px; }
 .detail-images { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; max-width: 900px; }
 .detail-images img { width: 100%; border: 1.5px solid var(--ink); background: #fff; }
 .detail-price { font-family: var(--font-display); font-weight: 700; font-size: 40px; color: var(--accent); margin-top: 18px; }

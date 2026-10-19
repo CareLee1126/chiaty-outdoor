@@ -6,7 +6,7 @@ import { CONTACT } from '../data/company';
 // email client opens pre-filled with their details, the product model and the page
 // link, addressed to our sales email. No "submitted" success is shown and the form
 // is NOT cleared after opening the email client.
-export default function ProductInquiryForm({ productName, productPath }) {
+export default function ProductInquiryForm({ productName, productPath, modelNo }) {
   const productUrl = 'https://www.chiatyoutdoor.com' + productPath;
 
   const [form, setForm] = useState({
@@ -19,6 +19,7 @@ export default function ProductInquiryForm({ productName, productPath }) {
     const subject = `B2B Inquiry — ${productName}`;
     const body = [
       `Product: ${productName}`,
+      modelNo ? `Model No.: ${modelNo}` : null,
       `Product page: ${productUrl}`,
       '',
       `Name: ${form.name}`,
@@ -29,7 +30,7 @@ export default function ProductInquiryForm({ productName, productPath }) {
       '',
       'Message:',
       form.message,
-    ].join('\n');
+    ].filter((line) => line !== null).join('\n');
     return `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
