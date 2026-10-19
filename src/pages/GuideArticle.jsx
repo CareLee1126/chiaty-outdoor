@@ -32,45 +32,98 @@ export default function GuideArticle() {
     .filter((p) => p.category === guide.relatedCategory)
     .slice(0, 4);
 
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: guide.title,
+      description: guide.seoDescription,
+      image: SITE_ORIGIN + guide.cover,
+      author: { '@type': 'Organization', name: 'Chiaty Outdoor' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Chiaty Outdoor',
+        url: SITE_ORIGIN + '/',
+      },
+      mainEntityOfPage: url,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_ORIGIN + '/' },
+        { '@type': 'ListItem', position: 2, name: 'Buyer Guides', item: SITE_ORIGIN + '/buyer-guides' },
+        { '@type': 'ListItem', position: 3, name: guide.breadcrumbLabel, item: url },
+      ],
+    },
+  ];
+  if (guide.faq?.length) {
+    jsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: guide.faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  }
+
   useSeo({
     title: guide.seoTitle,
     description: guide.seoDescription,
     path: `/buyer-guides/${guide.slug}`,
-    jsonLd: [
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: guide.title,
-        description: guide.seoDescription,
-        image: SITE_ORIGIN + guide.cover,
-        author: { '@type': 'Organization', name: 'Chiaty Outdoor' },
-        publisher: {
-          '@type': 'Organization',
-          name: 'Chiaty Outdoor',
-          url: SITE_ORIGIN + '/',
-        },
-        mainEntityOfPage: url,
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_ORIGIN + '/' },
-          { '@type': 'ListItem', position: 2, name: 'Buyer Guides', item: SITE_ORIGIN + '/buyer-guides' },
-          { '@type': 'ListItem', position: 3, name: guide.breadcrumbLabel, item: url },
-        ],
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: guide.faq.map((f) => ({
-          '@type': 'Question',
-          name: f.q,
-          acceptedAnswer: { '@type': 'Answer', text: f.a },
-        })),
-      },
-    ],
+    jsonLd,
   });
+
+  const renderBlock = (block, i) => {
+    switch (block.type) {
+      case 'h3':
+        return <h3 key={i} className="guide-subhead">{block.text}</h3>;
+      case 'p':
+        return <p key={i}>{block.text}</p>;
+      case 'ul':
+        return (
+          <ul className="guide-list" key={i}>
+            {block.items.map((it, j) => <li key={j}>{it}</li>)}
+          </ul>
+        );
+      case 'ol':
+        return (
+          <ol className="guide-list-ol" key={i}>
+            {block.items.map((it, j) => (
+              <li key={j}>
+                {it.h ? <><strong>{it.h}</strong> {it.p}</> : it}
+              </li>
+            ))}
+          </ol>
+        );
+      case 'img':
+        return <img className="guide-inline-img" key={i} src={block.src} alt={block.alt} loading="lazy" />;
+      case 'table':
+        return (
+          <div className="guide-table-wrap" key={i}>
+            <table className="guide-table">
+              <thead>
+                <tr>{block.headers.map((h, j) => <th key={j}>{h}</th>)}</tr>
+              </thead>
+              <tbody>
+                {block.rows.map((row, r) => (
+                  <tr key={r}>
+                    {row.map((cell, c) => (
+                      c === 0 ? <th key={c} scope="row">{cell}</th> : <td key={c} data-label={block.headers[c]}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
 
   return (
     <>
@@ -102,9 +155,9 @@ export default function GuideArticle() {
           {guide.sections.map((s) => (
             <section className="guide-section" key={s.h}>
               <h2>{s.h}</h2>
-              {s.p.map((para, i) => (
-                <p key={i}>{para}</p>
-              ))}
+              {s.blocks
+                ? s.blocks.map((b, i) => renderBlock(b, i))
+                : s.p.map((para, i) => <p key={i}>{para}</p>)}
             </section>
           ))}
 
@@ -120,15 +173,17 @@ export default function GuideArticle() {
           )}
 
           {/* FAQ */}
-          <section className="guide-section guide-faq">
-            <h2>Frequently asked questions</h2>
-            {guide.faq.map((f) => (
-              <div className="faq-item" key={f.q}>
-                <h3 className="faq-q">{f.q}</h3>
-                <p className="faq-a">{f.a}</p>
-              </div>
-            ))}
-          </section>
+          {guide.faq?.length > 0 && (
+            <section className="guide-section guide-faq">
+              <h2>Frequently asked questions</h2>
+              {guide.faq.map((f) => (
+                <div className="faq-item" key={f.q}>
+                  <h3 className="faq-q">{f.q}</h3>
+                  <p className="faq-a">{f.a}</p>
+                </div>
+              ))}
+            </section>
+          )}
 
           {/* INQUIRY CTA */}
           <div className="guide-cta">

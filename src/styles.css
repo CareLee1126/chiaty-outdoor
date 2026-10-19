@@ -84,6 +84,26 @@ h1, h2, h3 { margin: 0; }
 .guide-faq .faq-item { border-top: 1px solid var(--line); padding: 18px 0; }
 .guide-faq .faq-q { font-size: 17px; margin: 0 0 8px; }
 .guide-faq .faq-a { font-size: 15.5px; line-height: 1.7; color: var(--muted); margin: 0; }
+.guide-subhead { font-size: 18px; font-weight: 700; margin: 22px 0 10px; }
+.guide-list { margin: 0 0 16px; padding-left: 22px; }
+.guide-list li { font-size: 15.5px; line-height: 1.7; margin: 0 0 7px; }
+.guide-list-ol { margin: 0 0 16px; padding-left: 22px; }
+.guide-list-ol li { font-size: 15.5px; line-height: 1.7; margin: 0 0 12px; }
+.guide-list-ol li strong { display: block; margin-bottom: 2px; }
+.guide-inline-img { width: 100%; max-width: 480px; display: block; border-radius: 14px; margin: 8px auto 22px; }
+.guide-table-wrap { overflow-x: auto; margin: 4px 0 20px; -webkit-overflow-scrolling: touch; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 520px; }
+.guide-table th, .guide-table td { border: 1px solid var(--line); padding: 11px 14px; text-align: left; vertical-align: top; line-height: 1.5; }
+.guide-table thead th { background: var(--ink); color: var(--paper); font-weight: 700; }
+.guide-table tbody th[scope="row"] { background: var(--wash, #f6f3ee); font-weight: 700; }
+@media (max-width: 640px) {
+  .guide-table { min-width: 0; border: 0; }
+  .guide-table thead { display: none; }
+  .guide-table tbody th[scope="row"] { display: block; background: var(--ink); color: var(--paper); border-radius: 8px 8px 0 0; }
+  .guide-table tr { display: block; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 14px; overflow: hidden; }
+  .guide-table td { display: block; border: 0; border-top: 1px solid var(--line); }
+  .guide-table td::before { content: attr(data-label); display: block; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+}
 .guide-cta { background: var(--ink); color: var(--paper); border-radius: 16px; padding: 36px; margin-top: 40px; text-align: center; }
 .guide-cta h2 { font-size: clamp(22px, 3vw, 30px); margin: 0 0 12px; }
 .guide-cta p { color: rgba(255,255,255,0.78); font-size: 15.5px; line-height: 1.65; max-width: 52ch; margin: 0 auto 22px; }

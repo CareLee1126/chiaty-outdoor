@@ -227,4 +227,154 @@ export const guides = [
       },
     ],
   },
+  {
+    slug: 'high-back-vs-low-back-camping-chairs',
+    title: 'High-Back vs. Low-Back Camping Chairs: A Guide for Wholesale Buyers',
+    seoTitle: 'High-Back vs. Low-Back Camping Chairs | Wholesale Buyer Guide',
+    seoDescription:
+      'Compare high-back and low-back camping chairs for wholesale: comfort, portability, target market, customization and sourcing considerations.',
+    cover: '/assets/images/products/guide-highlow-cover.jpg',
+    excerpt:
+      'Choosing between high-back and low-back camping chairs affects your target customer, container loading, price positioning and repeat-order potential. A practical guide to building the right product mix.',
+    readMins: 7,
+    updated: '2026-10',
+    breadcrumbLabel: 'High-Back vs. Low-Back Camping Chairs',
+    relatedCategory: 'Camping Chair',
+    intro: [
+      'For wholesale buyers, choosing between high-back and low-back camping chairs is not only a design decision. It affects your target customer, container loading, price positioning, retail display and repeat-order potential.',
+      'Both styles are popular, but they serve different outdoor occasions. This guide helps importers, distributors and retailers choose the right product mix.',
+    ],
+    sections: [
+      {
+        h: 'What Is a High-Back Camping Chair?',
+        blocks: [
+          { type: 'p', text: 'A high-back camping chair provides support for the upper back, shoulders and sometimes the head. It is designed for longer periods of sitting and a more relaxed outdoor experience.' },
+          { type: 'img', src: '/assets/images/products/ct311b_1.jpg', alt: 'High-back folding camping chair with headrest and aluminum frame' },
+          { type: 'p', text: 'High-back chairs are commonly selected for:' },
+          { type: 'ul', items: [
+            'Camping and caravan use',
+            'Beach holidays',
+            'Glamping and leisure resorts',
+            'Older consumers or comfort-focused buyers',
+            'Premium outdoor retail collections',
+          ] },
+          { type: 'h3', text: 'Key advantages' },
+          { type: 'ul', items: [
+            'Better upper-back and neck support',
+            'More comfortable for long sitting periods',
+            'Stronger premium appearance at retail',
+            'More space for features such as head pillows, cup holders or side pockets',
+          ] },
+          { type: 'h3', text: 'Things to consider' },
+          { type: 'p', text: 'A high-back chair usually uses more fabric and frame material. It may be heavier and take up more space when packed. Buyers should check folded size, carton dimensions and loading quantity before placing an order.' },
+        ],
+      },
+      {
+        h: 'What Is a Low-Back Camping Chair?',
+        blocks: [
+          { type: 'p', text: 'A low-back camping chair has a shorter backrest and a more compact profile. It is often chosen for portability, quick setup and outdoor activities where users move frequently.' },
+          { type: 'img', src: '/assets/images/products/ct311a_1.jpg', alt: 'Compact low-back folding camping chair with mesh panels and aluminum frame' },
+          { type: 'p', text: 'Low-back chairs are commonly selected for:' },
+          { type: 'ul', items: [
+            'Hiking and backpacking',
+            'Music festivals',
+            'Fishing trips',
+            'Picnics and day trips',
+            'Value-oriented retail promotions',
+          ] },
+          { type: 'h3', text: 'Key advantages' },
+          { type: 'ul', items: [
+            'Lightweight and easy to carry',
+            'Smaller packed size',
+            'Suitable for customers who value portability',
+            'Often easier to position at an entry-level price point',
+          ] },
+          { type: 'h3', text: 'Things to consider' },
+          { type: 'p', text: 'Low-back chairs offer less support for the shoulders and head. They are best suited to shorter breaks or active outdoor use rather than extended lounging.' },
+        ],
+      },
+      {
+        h: 'High-Back vs. Low-Back: Key Comparison for Buyers',
+        blocks: [
+          { type: 'table',
+            headers: ['Factor', 'High-Back Camping Chair', 'Low-Back Camping Chair'],
+            rows: [
+              ['Comfort', 'Higher support for long sitting', 'Best for short breaks and active use'],
+              ['Portability', 'Usually larger and heavier', 'Usually lighter and more compact'],
+              ['Retail Positioning', 'Mid-range to premium', 'Entry-level to mid-range'],
+              ['Target Customer', 'Camping, beach, leisure, glamping', 'Hiking, festivals, picnics, fishing'],
+              ['Customization Space', 'More visible fabric area for branding', 'Compact and simple branding options'],
+              ['Loading Efficiency', 'Check carton size carefully', 'Often easier for compact packing'],
+            ],
+          },
+        ],
+      },
+      {
+        h: 'How Wholesale Buyers Should Choose',
+        blocks: [
+          { type: 'p', text: 'Before selecting a chair style, ask these questions:' },
+          { type: 'ol', items: [
+            { h: 'Who is your main customer?', p: 'Comfort-focused camping and beach customers may prefer high-back models. Active and price-sensitive customers may prefer low-back models.' },
+            { h: 'What is your sales channel?', p: 'Specialty outdoor stores may sell premium high-back chairs well. Supermarkets, promotional campaigns and online marketplaces may need compact, value-focused low-back models.' },
+            { h: 'What is your target retail price?', p: 'The chair design, fabric, frame, accessories and packaging should match your expected retail position.' },
+            { h: 'How important is container loading?', p: 'Always compare folded dimensions, carton size and quantity per container. A compact chair may offer stronger logistics efficiency.' },
+            { h: 'Do you need customization?', p: 'Consider logo printing, fabric color, carry bag design, hangtags, carton artwork and packaging requirements early in the sourcing process.' },
+          ] },
+        ],
+      },
+      {
+        h: 'A Practical Product-Mix Recommendation',
+        blocks: [
+          { type: 'p', text: 'For many wholesale buyers, the best approach is not choosing only one style. A balanced collection can include:' },
+          { type: 'ul', items: [
+            'One compact low-back model for entry-level or promotional sales',
+            'One durable mid-range camping chair for general outdoor use',
+            'One high-back comfort model for beach, camping or premium retail customers',
+          ] },
+          { type: 'p', text: 'This gives your customers more choice while allowing you to serve different price points.' },
+        ],
+      },
+      {
+        h: 'Questions to Ask Your Camping Chair Supplier',
+        blocks: [
+          { type: 'p', text: 'Before confirming an order, request:' },
+          { type: 'ul', items: [
+            'Frame material and tube specification',
+            'Fabric type and fabric weight',
+            'Product dimensions and folded dimensions',
+            'Product weight and recommended load capacity',
+            'MOQ by color or model',
+            'Sample time and production lead time',
+            'Packaging method and carton dimensions',
+            'Available logo, color and packaging options',
+            'Product photos and quality inspection details',
+          ] },
+        ],
+      },
+      {
+        h: 'Need Help Selecting the Right Model?',
+        blocks: [
+          { type: 'p', text: 'Chiaty Outdoor supports wholesale buyers looking for folding camping chairs, beach chairs and outdoor furniture with OEM/ODM options. Contact us on WhatsApp to request product specifications, catalogue, MOQ and customization options.' },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Are high-back or low-back camping chairs better for wholesale?',
+        a: 'Neither is universally better — it depends on your market. High-back chairs suit comfort-focused camping, beach and glamping customers and premium retail, while low-back chairs suit hiking, festivals, picnics and value-oriented promotions. Many buyers stock both to cover different price points.',
+      },
+      {
+        q: 'Which camping chair style is more portable?',
+        a: 'Low-back chairs are usually lighter and pack smaller, which makes them more portable and often more efficient for container loading. High-back chairs use more fabric and frame material, so always compare folded size and carton dimensions before ordering.',
+      },
+      {
+        q: 'What product mix should a wholesale buyer stock?',
+        a: 'A balanced range often works best: one compact low-back model for entry-level or promotional sales, one durable mid-range camping chair for general use, and one high-back comfort model for beach, camping or premium retail. This serves multiple customer types and price points.',
+      },
+      {
+        q: 'Can Chiaty Outdoor customize both high-back and low-back chairs?',
+        a: 'Yes. Chiaty offers OEM/ODM on both styles — including logo printing, fabric color, carry bag design and packaging. Share your target models and customization needs to request a quote.',
+      },
+    ],
+  },
 ];
