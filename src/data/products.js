@@ -29,6 +29,33 @@ export const products = [
     "image": "/assets/images/products/ct311b_1.jpg"
   },
   {
+    "id": "ct-104",
+    "name": "7-Position Lay-Flat Aluminum Beach Chair with Armrests",
+    "category": "Beach Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Request a quote",
+    "image": "/assets/images/products/ct104_1.jpg"
+  },
+  {
+    "id": "ct-113",
+    "name": "5-Position Aluminum Beach Chair with High Back and Armrests",
+    "category": "Beach Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Request a quote",
+    "image": "/assets/images/products/ct113_1.jpg"
+  },
+  {
+    "id": "ct-117",
+    "name": "Blue and White Folding Webbed Lawn Chair with Armrests",
+    "category": "Beach Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Request a quote",
+    "image": "/assets/images/products/ct117_1.jpg"
+  },
+  {
     "id": "62014654854",
     "name": "High Seat Cushion Adjustable Beach Chair Wholesale",
     "category": "Beach Chair",

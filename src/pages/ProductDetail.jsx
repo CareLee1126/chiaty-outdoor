@@ -170,7 +170,11 @@ export default function ProductDetail() {
 
               <div className="detail-actions">
                 {quoteNote ? (
-                  <a href={emailQuoteHref} className="btn btn-accent">Email Us for a Quote <ArrowUpRight size={16} /></a>
+                  isLocked ? (
+                    <a href={emailQuoteHref} className="btn btn-accent">Email Us for a Quote <ArrowUpRight size={16} /></a>
+                  ) : (
+                    <a href="#inquiry-form" className="btn btn-accent">Request a Quote <ArrowUpRight size={16} /></a>
+                  )
                 ) : (
                   <Link to={quoteHref} className="btn btn-accent">Request Quote <ArrowUpRight size={16} /></Link>
                 )}
@@ -238,7 +242,7 @@ export default function ProductDetail() {
 
           {/* INQUIRY PROMPT + EMAIL CTA */}
           {inquiryPrompt && (
-            <div className="detail-inquiry">
+            <div className="detail-inquiry" id={isLocked ? undefined : 'inquiry-form'}>
               <p>{inquiryPrompt}</p>
               <div className="detail-actions" style={{ marginTop: 18 }}>
                 <a
@@ -252,7 +256,11 @@ export default function ProductDetail() {
                 </a>
               </div>
               <div className="inquiry-form-wrap">
-                <ProductInquiryForm productName={product.name} productPath={`/products/${product.id}`} />
+                {isLocked ? (
+                  <ProductInquiryForm productName={product.name} productPath={`/products/${product.id}`} />
+                ) : (
+                  <ProductInquiryForm productName={product.name} productPath={`/products/${product.id}`} modelNo={itemNo} />
+                )}
               </div>
             </div>
           )}

@@ -5,6 +5,9 @@ export const itemNumbers = {
   'ct-302': 'CT-302',
   'ct-311a': 'CT-311A',
   'ct-311b': 'CT-311B',
+  'ct-104': 'CT-104',
+  'ct-113': 'CT-113',
+  'ct-117': 'CT-117',
   // Beach chairs
   '62014654854': 'CT-122',
   '62319384598': 'CT-103',
