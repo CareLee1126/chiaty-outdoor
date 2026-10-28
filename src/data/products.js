@@ -56,6 +56,24 @@ export const products = [
     "image": "/assets/images/products/ct117_1.jpg"
   },
   {
+    "id": "ct-109a",
+    "name": "Kids Folding Beach Chair with Umbrella – Ocean Animal Print",
+    "category": "Beach Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Request a quote",
+    "image": "/assets/images/products/ct109a_1.jpg"
+  },
+  {
+    "id": "ct-609",
+    "name": "Folding Stool with Padded Seat – Red & Beige",
+    "category": "Fishing Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Request a quote",
+    "image": "/assets/images/products/ct609_1.jpg"
+  },
+  {
     "id": "62014654854",
     "name": "High Seat Cushion Adjustable Beach Chair Wholesale",
     "category": "Beach Chair",

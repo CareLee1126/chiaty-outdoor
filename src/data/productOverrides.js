@@ -259,4 +259,93 @@ export const productOverrides = {
     seoDescription:
       'Explore the CT-117 blue and white folding webbed lawn chair with a steel frame and armrests. MOQ 200 pieces. Contact us for wholesale pricing and OEM options.',
   },
+
+  // CT-109A — Kids Folding Beach Chair with Umbrella – Ocean Animal Print (steel frame)
+  'ct-109a': {
+    itemNo: 'CT-109A',
+    gallery: ['/assets/images/products/ct109a_1.jpg'],
+    shortIntro:
+      'The CT-109A is a kids folding beach chair with a clip-on umbrella and an ocean animal print seat. Built on a steel frame, it folds flat for transport and is sized for children at the beach, garden or park. The chair weighs 1.5 kg and is available for wholesale orders from 200 pieces, with OEM/ODM customization available.',
+    quoteNote:
+      'Pricing depends on order quantity and customization requirements. Send us your requirements for a quotation.',
+    description:
+      'The CT-109A is a kids folding beach chair with a clip-on umbrella and an ocean animal print seat. Built on a steel frame, it folds flat for transport and is sized for children at the beach, garden or park. The chair weighs 1.5 kg and is available for wholesale orders from 200 pieces, with OEM/ODM customization available.',
+    sellingPoints: [
+      { h: 'Child-sized beach seating', p: 'Compact 48 × 38 × 49 cm open size suits children for beach, garden and outdoor use.' },
+      { h: 'Clip-on sun umbrella', p: 'An attached umbrella provides shade over the seat during outdoor use.' },
+      { h: 'Ocean animal print', p: 'A colourful sea-creature print on the seat and back gives the chair a playful kids look.' },
+      { h: 'Folds flat for transport', p: 'The steel frame folds flat so the chair packs easily into a car or beach bag.' },
+      { h: 'Lightweight 1.5 kg', p: 'Light enough for parents to carry together with other beach gear.' },
+      { h: 'Colour & brand customization', p: 'Custom colours are supported, with OEM/ODM branding available for wholesale orders.' },
+    ],
+    specs: [
+      { k: 'Model', v: 'CT-109A' },
+      { k: 'Product Type', v: 'Kids Folding Beach Chair with Umbrella' },
+      { k: 'Frame Material', v: 'Steel' },
+      { k: 'Open Size', v: '48 × 38 × 49 cm' },
+      { k: 'Product Weight', v: '1.5 kg (per chair)' },
+      { k: 'Load Capacity', v: '120 kg' },
+      { k: 'Minimum Order Quantity', v: '200 pieces' },
+      { k: 'Sample Lead Time', v: '3–5 days' },
+      { k: 'Packaging', v: '49 × 38.5 × 55 cm / 10 pieces per carton' },
+      { k: 'OEM / ODM', v: 'Available' },
+      { k: 'Color Options', v: 'Custom colors supported. Contact us to discuss available colors and customization requirements.' },
+    ],
+    customizationNote:
+      'Custom colors are supported and OEM/ODM branding is available for wholesale orders. Contact us to discuss colour options and branding requirements; the minimum order quantity is 200 pieces.',
+    inquiryPrompt:
+      'Interested in the CT-109A kids beach chair? Send us your order quantity, destination and customization requirements to request a wholesale quotation.',
+    seoTitle: 'Kids Folding Beach Chair with Umbrella CT-109A | Chiaty Outdoor',
+    seoDescription:
+      'Explore the CT-109A kids folding beach chair with a clip-on umbrella and ocean animal print. Steel frame, MOQ 200 pieces. Contact Chiaty Outdoor for OEM/ODM options.',
+  },
+
+  // CT-609 — Folding Stool with Padded Seat – Red & Beige (steel frame)
+  'ct-609': {
+    itemNo: 'CT-609',
+    gallery: [
+      '/assets/images/products/ct609_1.jpg',
+      '/assets/images/products/ct609_2.jpg',
+      '/assets/images/products/ct609_3.jpg',
+    ],
+    galleryAlts: [
+      'Red and beige folding stool with padded seat on a steel frame',
+      'CT-609 folding stool packed in carry bag, size reference',
+      'CT-609 folding stool packed in carry bag, size reference',
+    ],
+    shortIntro:
+      'The CT-609 is a compact folding stool with a padded seat on a steel frame. Weighing 545 g and folding down to 26 × 12 × 6 cm, it is sized for fishing, camping, picnics and hiking where a light, packable seat is useful. It is available for wholesale orders from 200 pieces, with OEM/ODM customization available.',
+    quoteNote:
+      'Pricing depends on order quantity and customization requirements. Send us your requirements for a quotation.',
+    description:
+      'The CT-609 is a compact folding stool with a padded seat on a steel frame. Weighing 545 g and folding down to 26 × 12 × 6 cm, it is sized for fishing, camping, picnics and hiking where a light, packable seat is useful. It is available for wholesale orders from 200 pieces, with OEM/ODM customization available.',
+    sellingPoints: [
+      { h: 'Ultralight 545 g', p: 'At 545 g, the stool adds little weight to a backpack or tackle bag.' },
+      { h: 'Compact folded size', p: 'Folds down to 26 × 12 × 6 cm and comes with a carry bag for storage and transport.' },
+      { h: 'Padded seat', p: 'A padded seat surface gives a more comfortable sit than a bare fabric top.' },
+      { h: 'For fishing, camping & picnics', p: 'A portable seat for fishing, camping, picnics, hiking and other outdoor activities.' },
+      { h: 'Steel frame', p: 'The folding steel frame supports up to 120 kg.' },
+      { h: 'Colour & brand customization', p: 'Custom colours are supported, with OEM/ODM branding available for wholesale orders.' },
+    ],
+    specs: [
+      { k: 'Model', v: 'CT-609' },
+      { k: 'Product Type', v: 'Folding Stool with Padded Seat' },
+      { k: 'Frame Material', v: 'Steel' },
+      { k: 'Open Size', v: '26 × 24 × 26 cm' },
+      { k: 'Folded Size', v: '26 × 12 × 6 cm' },
+      { k: 'Product Weight', v: '545 g (per stool)' },
+      { k: 'Load Capacity', v: '120 kg' },
+      { k: 'Minimum Order Quantity', v: '200 pieces' },
+      { k: 'Sample Lead Time', v: '3–5 days' },
+      { k: 'OEM / ODM', v: 'Available' },
+      { k: 'Color Options', v: 'Custom colors supported. Contact us to discuss available colors and customization requirements.' },
+    ],
+    customizationNote:
+      'Custom colors are supported and OEM/ODM branding is available for wholesale orders. Contact us to discuss colour options and branding requirements; the minimum order quantity is 200 pieces.',
+    inquiryPrompt:
+      'Interested in the CT-609 folding stool? Send us your order quantity, destination and customization requirements to request a wholesale quotation.',
+    seoTitle: 'Folding Stool with Padded Seat CT-609 | Chiaty Outdoor',
+    seoDescription:
+      'Discover the CT-609 compact folding stool with a padded seat and steel frame. 545 g, folds to 26 × 12 × 6 cm, MOQ 200 pieces. Contact us for OEM/ODM options.',
+  },
 };

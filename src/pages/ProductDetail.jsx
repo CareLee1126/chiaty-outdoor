@@ -21,6 +21,7 @@ export default function ProductDetail() {
   const isLocked = product ? LOCKED_IDS.has(product.id) : false;
 
   const gallery = override?.gallery?.length ? override.gallery : product ? [product.image] : [];
+  const galleryAlts = override?.galleryAlts || [];
   const [active, setActive] = useState(0);
   useEffect(() => { setActive(0); }, [id]);
 
@@ -117,7 +118,7 @@ export default function ProductDetail() {
             {/* MEDIA + GALLERY */}
             <div className="detail-gallery">
               <div className="detail-media">
-                <img src={gallery[active]} alt={imagePending ? `${product.name} — product image pending` : product.name} />
+                <img src={gallery[active]} alt={galleryAlts[active] || (imagePending ? `${product.name} — product image pending` : product.name)} />
               </div>
               {gallery.length > 1 && (
                 <div className="detail-thumbs">
@@ -128,7 +129,7 @@ export default function ProductDetail() {
                       onClick={() => setActive(i)}
                       aria-label={`View image ${i + 1}`}
                     >
-                      <img src={src} alt={`${product.name} view ${i + 1}`} loading="lazy" />
+                      <img src={src} alt={galleryAlts[i] || `${product.name} view ${i + 1}`} loading="lazy" />
                     </button>
                   ))}
                 </div>

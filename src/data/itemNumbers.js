@@ -8,6 +8,8 @@ export const itemNumbers = {
   'ct-104': 'CT-104',
   'ct-113': 'CT-113',
   'ct-117': 'CT-117',
+  'ct-109a': 'CT-109A',
+  'ct-609': 'CT-609',
   // Beach chairs
   '62014654854': 'CT-122',
   '62319384598': 'CT-103',
