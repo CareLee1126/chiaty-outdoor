@@ -82,6 +82,16 @@ export default function GuideArticle() {
         return <h3 key={i} className="guide-subhead">{block.text}</h3>;
       case 'p':
         return <p key={i}>{block.text}</p>;
+      case 'plinks':
+        return (
+          <p key={i}>
+            {block.parts.map((part, j) =>
+              part.to
+                ? <Link key={j} to={part.to}>{part.text}</Link>
+                : <React.Fragment key={j}>{part.text}</React.Fragment>
+            )}
+          </p>
+        );
       case 'ul':
         return (
           <ul className="guide-list" key={i}>
@@ -187,8 +197,8 @@ export default function GuideArticle() {
 
           {/* INQUIRY CTA */}
           <div className="guide-cta">
-            <h2>Ready to source from the factory?</h2>
-            <p>Send your target models, quantity and customization needs — we reply within 24 hours with wholesale pricing and lead times.</p>
+            <h2>{guide.ctaHeading || 'Ready to source from the factory?'}</h2>
+            <p>{guide.ctaText || 'Send your target models, quantity and customization needs — we reply within 24 hours with wholesale pricing and lead times.'}</p>
             <div className="guide-cta-actions">
               <a
                 href={waHref(waMessage)}
@@ -197,7 +207,7 @@ export default function GuideArticle() {
                 className="btn btn-whatsapp"
                 onClick={() => trackWhatsAppClick('buyer_guide')}
               >
-                <MessageCircle size={16} /> Request a Quote on WhatsApp
+                <MessageCircle size={16} /> {guide.ctaButton || 'Request a Quote on WhatsApp'}
               </a>
               <Link to="/contact" className="btn btn-accent">
                 Contact Us <ArrowUpRight size={16} />
