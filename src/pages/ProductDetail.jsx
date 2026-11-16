@@ -81,7 +81,8 @@ export default function ProductDetail() {
   const imagePending = override?.imagePending;
   const hasPrice = product.priceMin != null;
   const quoteHref = `/contact?product=${encodeURIComponent(product.name)}`;
-  const waMessage = productMessage(product.name, `/products/${product.id}`);
+  const waName = override?.waIncludeModel && itemNo ? `${product.name} (Model ${itemNo})` : product.name;
+  const waMessage = productMessage(waName, `/products/${product.id}`);
   const productUrl = `${SITE_ORIGIN}/products/${product.id}`;
   const emailSubject = `Quote request — ${product.name}`;
   const emailBody = [
@@ -141,6 +142,7 @@ export default function ProductDetail() {
               <div className="prod-cat" style={{ marginBottom: 10 }}>{product.category}</div>
               {itemNo && isLocked && <div className="detail-itemno mono">Item No. {itemNo}</div>}
               <h1 className="detail-title">{product.name}</h1>
+              {override?.subtitle && <p className="detail-subtitle">{override.subtitle}</p>}
               {itemNo && !isLocked && <div className="detail-modelno mono">Model No.: {itemNo}</div>}
 
               {hasPrice ? (
@@ -154,7 +156,7 @@ export default function ProductDetail() {
               {quoteNote && (
                 <div className="detail-quotebox">
                   <div className="detail-quote-facts">
-                    {itemNo && <span><strong>MOQ:</strong> 200 pieces</span>}
+                    {itemNo && <span><strong>MOQ:</strong> {override?.moqLabel || '200 pieces'}</span>}
                     <span>OEM customization available</span>
                   </div>
                   <p>{quoteNote}</p>
@@ -230,6 +232,7 @@ export default function ProductDetail() {
               </tbody>
             </table>
             {!override && <p className="form-note" style={{ marginTop: 14 }}>{DETAIL_NOTE}</p>}
+            {override?.safetyNote && <p className="detail-safety">{override.safetyNote}</p>}
           </div>
 
           {/* CUSTOMIZATION */}

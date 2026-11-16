@@ -74,6 +74,15 @@ export const products = [
     "image": "/assets/images/products/ct609_1.jpg"
   },
   {
+    "id": "ct-317-baby-beach-chair-canopy",
+    "name": "Wholesale Baby Beach Chair with UPF 50+ Canopy & Bug Net",
+    "category": "Beach Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Request a quote",
+    "image": "/assets/images/products/ct317_1.jpg"
+  },
+  {
     "id": "62014654854",
     "name": "High Seat Cushion Adjustable Beach Chair Wholesale",
     "category": "Beach Chair",

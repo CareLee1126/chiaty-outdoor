@@ -348,4 +348,60 @@ export const productOverrides = {
     seoDescription:
       'Discover the CT-609 compact folding stool with a padded seat and steel frame. 545 g, folds to 26 × 12 × 6 cm, MOQ 200 pieces. Contact us for OEM/ODM options.',
   },
+
+  // CT-317 — Wholesale Baby Beach Chair with UPF 50+ Canopy & Bug Net (infant outdoor folding chair)
+  'ct-317-baby-beach-chair-canopy': {
+    itemNo: 'CT-317',
+    subtitle: 'Portable Infant Folding Camping Chair for Beach, Camping and Outdoor Travel',
+    moqLabel: '500 pieces',
+    waIncludeModel: true,
+    gallery: [
+      '/assets/images/products/ct317_1.jpg',
+      '/assets/images/products/ct317_2.jpg',
+      '/assets/images/products/ct317_3.jpg',
+    ],
+    galleryAlts: [
+      'Wholesale baby beach chair CT-317 with UPF 50+ sun canopy, bug net and breathable mesh seat',
+      'Parent and infant using the CT-317 baby beach chair with sun canopy on the beach',
+      'CT-317 baby beach chair shown in grey, pink, blue and beige custom colour options',
+    ],
+    shortIntro:
+      'CT-317 is a portable baby beach chair designed for outdoor family use, including beach trips, camping and travel. It combines a folding steel frame, UPF 50+ sun canopy, integrated bug net, breathable mesh seat and three-point safety buckle. Suitable for wholesale, private-label and custom colour projects.',
+    quoteNote:
+      'Pricing depends on order quantity and customization requirements. Send us your requirements for a quotation.',
+    description:
+      'CT-317 is a portable baby beach chair designed for outdoor family use, including beach trips, camping and travel. It combines a folding steel frame, UPF 50+ sun canopy, integrated bug net, breathable mesh seat and three-point safety buckle. Suitable for wholesale, private-label and custom colour projects.',
+    sellingPoints: [
+      { h: 'UPF 50+ Sun Canopy & Bug Net', p: 'A protective canopy and integrated bug net help create a more comfortable outdoor space for infants during beach, camping and travel use.' },
+      { h: 'Portable Folding Design', p: 'The folding structure supports convenient transport, storage and retail-ready outdoor use.' },
+      { h: 'Breathable Mesh Seat', p: 'Skin-friendly breathable mesh helps improve airflow during warm-weather outdoor activities.' },
+      { h: 'Three-Point Safety Buckle', p: 'Equipped with a three-point safety buckle for seated use. Adult supervision is required at all times.' },
+      { h: 'OEM Colour & Logo Customisation', p: 'Grey, beige and other colour options are available for custom projects. Logo customisation is also supported.' },
+    ],
+    specs: [
+      { k: 'Model No.', v: 'CT-317' },
+      { k: 'Product Name', v: 'Baby Beach Chair with Canopy' },
+      { k: 'Frame', v: '19 mm Steel Tube' },
+      { k: 'Seat Material', v: 'Breathable Mesh Fabric' },
+      { k: 'Features', v: 'UPF 50+ Sun Canopy, Bug Net, Three-Point Safety Buckle, Folding Design' },
+      { k: 'Product Size', v: '63.5 × 50 × 71.1 cm' },
+      { k: 'Net Weight', v: '2.22 kg' },
+      { k: 'Single Unit Package Size', v: '38.8 × 13.9 × 13.7 cm' },
+      { k: 'Recommended Age', v: '0–12 Months' },
+      { k: 'Recommended Child Weight', v: '9–11.3 kg / 20–25 lbs' },
+      { k: 'Colours', v: 'Grey, Beige and Custom Colours' },
+      { k: 'MOQ', v: '500 pcs' },
+      { k: 'Production Lead Time', v: '30 days' },
+      { k: 'Customisation', v: 'Colour, Logo, Packaging on Request' },
+    ],
+    safetyNote:
+      'For supervised use only. Please follow all product instructions and local safety requirements.',
+    customizationNote:
+      'Grey, beige and other custom colours are available, with logo and packaging customisation on request. OEM and private-label projects are welcome; the minimum order quantity is 500 pieces.',
+    inquiryPrompt:
+      'Interested in the CT-317 baby beach chair? Send us your order quantity, destination and customization requirements to request a wholesale quotation.',
+    seoTitle: 'Baby Beach Chair with Canopy | Infant Folding Chair Manufacturer',
+    seoDescription:
+      'Wholesale baby beach chair with UPF 50+ canopy, bug net, breathable mesh and three-point safety buckle. Custom colours and logo options for OEM projects.',
+  },
 };
