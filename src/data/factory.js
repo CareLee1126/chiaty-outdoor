@@ -8,6 +8,13 @@ export const factoryVideo = {
   alt: 'Chiaty Outdoor factory production line in Jinhua, China',
 };
 
+// Sample room showroom video (same player style as the factory tour video).
+export const sampleRoomVideo = {
+  src: '/assets/factory/sample-room.mp4',
+  poster: '/assets/factory/sample-room-cover.jpg',
+  alt: 'Chiaty Outdoor outdoor furniture sample room with folding and beach chairs in Jinhua, China',
+};
+
 // Image shown beside the "Built for Wholesale & Custom Projects" capability intro.
 export const capabilityImage = {
   img: '/assets/factory/capability-workers.jpg',

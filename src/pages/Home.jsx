@@ -138,6 +138,9 @@ export default function Home() {
               </span>
             </div>
           </Link>
+          <p className="factory-entry-sub">
+            <Link to="/factory-quality#sample-room">Explore Our Sample Room <ArrowRight size={15} /></Link>
+          </p>
         </div>
       </section>
 

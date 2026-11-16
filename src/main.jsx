@@ -15,10 +15,24 @@ import FactoryQuality from './pages/FactoryQuality';
 import './styles.css';
 
 function ScrollToTop() {
-  const { pathname, search } = useLocation();
+  const { pathname, search, hash } = useLocation();
   useEffect(() => {
+    if (hash) {
+      const id = hash.slice(1);
+      const scrollToEl = () => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return true;
+        }
+        return false;
+      };
+      if (scrollToEl()) return;
+      const t = setTimeout(scrollToEl, 220);
+      return () => clearTimeout(t);
+    }
     window.scrollTo(0, 0);
-  }, [pathname, search]);
+  }, [pathname, search, hash]);
   return null;
 }
 

@@ -4,12 +4,15 @@ import { ArrowUpRight, Check, MessageCircle, Play } from 'lucide-react';
 import ProductInquiryForm from '../components/ProductInquiryForm';
 import useSeo, { SITE_ORIGIN } from '../data/useSeo';
 import { GENERIC_MESSAGE, waHref, trackWhatsAppClick } from '../data/whatsapp';
-import { factoryVideo, capabilityImage, productionSteps, qualityCustomization } from '../data/factory';
+import { factoryVideo, sampleRoomVideo, capabilityImage, productionSteps, qualityCustomization } from '../data/factory';
 
 export default function FactoryQuality() {
   const [playing, setPlaying] = useState(false);
+  const [srPlaying, setSrPlaying] = useState(false);
   const hasVideo = Boolean(factoryVideo.src);
   const hasPoster = Boolean(factoryVideo.poster);
+  const hasSampleVideo = Boolean(sampleRoomVideo.src);
+  const hasSamplePoster = Boolean(sampleRoomVideo.poster);
 
   useSeo({
     title: 'Factory & Quality — Inside Our Outdoor Furniture Factory | Chiaty Outdoor',
@@ -137,6 +140,69 @@ export default function FactoryQuality() {
         </section>
       )}
 
+      {/* SAMPLE ROOM */}
+      {hasSampleVideo && (
+        <section className="section" style={{ paddingTop: 8 }} id="sample-room">
+          <div className="container">
+            <div className="section-head">
+              <div className="section-tag">Our Sample Room</div>
+              <h2 className="section-title">Explore Our Outdoor Furniture Sample Room</h2>
+            </div>
+            <p className="section-lede" style={{ maxWidth: 820, marginBottom: 24 }}>
+              Our sample room brings together selected folding chairs, camping furniture and new
+              product developments for buyer review. It helps our team and customers discuss product
+              details, materials, colours, construction and customisation options more efficiently
+              before sampling or bulk production.
+            </p>
+            <div className="factory-video">
+              {srPlaying ? (
+                <video
+                  className="factory-video-el"
+                  src={sampleRoomVideo.src}
+                  poster={hasSamplePoster ? sampleRoomVideo.poster : undefined}
+                  controls
+                  autoPlay
+                  playsInline
+                  preload="metadata"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <button
+                  type="button"
+                  className="factory-video-cover"
+                  onClick={() => setSrPlaying(true)}
+                  aria-label="Play sample room video"
+                >
+                  {hasSamplePoster && <img src={sampleRoomVideo.poster} alt={sampleRoomVideo.alt} />}
+                  <span className="factory-video-play">
+                    <Play size={30} fill="currentColor" />
+                  </span>
+                </button>
+              )}
+            </div>
+            <div className="sample-room-cta">
+              <h3>Looking for a Custom Outdoor Furniture Project?</h3>
+              <p>Share your product requirements, target quantity and customisation needs with our team.</p>
+              <div className="detail-actions" style={{ marginTop: 16 }}>
+                <a href="#factory-inquiry" className="btn btn-accent">
+                  Request a Quote <ArrowUpRight size={16} />
+                </a>
+                <a
+                  href={waHref(GENERIC_MESSAGE)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
+                  onClick={() => trackWhatsAppClick('sample_room')}
+                >
+                  <MessageCircle size={16} /> Get Quote on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* QUALITY CONTROL & OEM CUSTOMIZATION */}
       {qualityCustomization.length > 0 && (
         <section className="section" style={{ paddingTop: 8 }}>
@@ -158,7 +224,7 @@ export default function FactoryQuality() {
       )}
 
       {/* INQUIRY */}
-      <section className="section" style={{ paddingTop: 8 }}>
+      <section className="section" style={{ paddingTop: 8 }} id="factory-inquiry">
         <div className="container">
           <div className="detail-inquiry">
             <div className="section-tag">Get in Touch</div>
