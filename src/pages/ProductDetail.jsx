@@ -82,7 +82,7 @@ export default function ProductDetail() {
   const hasPrice = product.priceMin != null;
   const quoteHref = `/contact?product=${encodeURIComponent(product.name)}`;
   const waName = override?.waIncludeModel && itemNo ? `${product.name} (Model ${itemNo})` : product.name;
-  const waMessage = productMessage(waName, `/products/${product.id}`);
+  const waMessage = override?.waMessageOverride || productMessage(waName, `/products/${product.id}`);
   const productUrl = `${SITE_ORIGIN}/products/${product.id}`;
   const emailSubject = `Quote request — ${product.name}`;
   const emailBody = [

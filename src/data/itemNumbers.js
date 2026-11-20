@@ -11,6 +11,7 @@ export const itemNumbers = {
   'ct-109a': 'CT-109A',
   'ct-609': 'CT-609',
   'ct-317-baby-beach-chair-canopy': 'CT-317',
+  'ct-126-face-down-tanning-beach-lounger': 'CT-126',
   // Beach chairs
   '62014654854': 'CT-122',
   '62319384598': 'CT-103',

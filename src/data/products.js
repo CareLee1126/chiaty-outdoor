@@ -83,6 +83,15 @@ export const products = [
     "image": "/assets/images/products/ct317_1.jpg"
   },
   {
+    "id": "ct-126-face-down-tanning-beach-lounger",
+    "name": "3-in-1 Face-Down Tanning Beach Lounger with Arm Holes",
+    "category": "Beach Chair",
+    "priceMin": null,
+    "priceMax": null,
+    "priceLabel": "Request a quote",
+    "image": "/assets/images/products/ct126_1.jpg"
+  },
+  {
     "id": "62014654854",
     "name": "High Seat Cushion Adjustable Beach Chair Wholesale",
     "category": "Beach Chair",

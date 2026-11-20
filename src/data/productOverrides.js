@@ -404,4 +404,58 @@ export const productOverrides = {
     seoDescription:
       'Wholesale baby beach chair with UPF 50+ canopy, bug net, breathable mesh and three-point safety buckle. Custom colours and logo options for OEM projects.',
   },
+
+  // CT-126 — 3-in-1 Face-Down Tanning Beach Lounger with Arm Holes
+  'ct-126-face-down-tanning-beach-lounger': {
+    itemNo: 'CT-126',
+    subtitle: 'Foldable Multi-Position Beach Recliner for Sitting, Lounging and Face-Down Sunbathing',
+    waMessageOverride:
+      'Hello Chiaty Outdoor, I am interested in CT-126 3-in-1 Face-Down Tanning Beach Lounger. Please send MOQ, custom colour/logo options and quotation details.',
+    gallery: [
+      '/assets/images/products/ct126_1.jpg',
+      '/assets/images/products/ct126_2.jpg',
+      '/assets/images/products/ct126_3.jpg',
+    ],
+    galleryAlts: [
+      'Face-down tanning beach lounger CT-126 with face cavity, arm slots and natural wood armrests',
+      'Model lying face down on the CT-126 folding beach lounge chair with face hole at the beach',
+      'CT-126 multi-position tanning chair shown in upright, lay-flat, face cavity and folded views',
+    ],
+    shortIntro:
+      'CT-126 is a 3-in-1 folding beach lounger designed for seated relaxation, reclined lounging and face-down sunbathing. Its face cavity with padded pillow, arm slots, adjustable backrest and independent footrest create a versatile outdoor seating solution for beach, poolside, patio and resort projects. Custom colour and logo options are available for wholesale and OEM orders.',
+    quoteNote:
+      'Pricing depends on order quantity and customization requirements. Send us your requirements for a quotation.',
+    description:
+      'CT-126 is a 3-in-1 folding beach lounger designed for seated relaxation, reclined lounging and face-down sunbathing. Its face cavity with padded pillow, arm slots, adjustable backrest and independent footrest create a versatile outdoor seating solution for beach, poolside, patio and resort projects. Custom colour and logo options are available for wholesale and OEM orders.',
+    sellingPoints: [
+      { h: 'Face Cavity, Pillow & Arm Slots', p: 'The open-and-close face cavity with a padded pillow is designed for comfortable face-down lounging. Integrated arm slots allow users to read, use a phone or relax while lying face down.' },
+      { h: '3-in-1 Seating and Lounging Design', p: 'Use CT-126 as an upright beach chair, a reclining lounger or a lay-flat outdoor tanning lounger.' },
+      { h: 'Multi-Position Recline with Independent Footrest', p: 'The adjustable backrest and foldable front footrest offer flexible positions for beach, poolside and patio relaxation.' },
+      { h: 'Outdoor-Ready Fabric and Frame Options', p: '600D Oxford polyester fabric provides a durable and breathable seating surface. Frame options include rust-proof aluminium tubing or powder-coated carbon steel, subject to the selected configuration.' },
+      { h: 'Natural Wood Armrests with Side Storage', p: 'Wide natural wood armrests add a premium touch, while the side cup pocket keeps small essentials within reach.' },
+      { h: 'Folding Design for Easy Carrying', p: 'The chair folds into a compact profile with a locking buckle and widened shoulder strap for convenient transport and storage.' },
+    ],
+    specs: [
+      { k: 'Model No.', v: 'CT-126' },
+      { k: 'Product Type', v: '3-in-1 Folding Face-Down Tanning Beach Lounger' },
+      { k: 'Functions', v: 'Sitting, Reclining and Face-Down Lounging' },
+      { k: 'Product Size', v: '154.3 × 71.4 × 100.9 cm' },
+      { k: 'Folded Size', v: '91.4 × 73.5 × 13.5 cm' },
+      { k: 'Weight Capacity', v: '275 lbs / Approx. 125 kg' },
+      { k: 'Fabric', v: '600D Oxford Polyester Fabric' },
+      { k: 'Frame Options', v: 'Rust-Proof Aluminium Tube / Powder-Coated Carbon Steel' },
+      { k: 'Armrests', v: 'Natural Wood Armrests' },
+      { k: 'Features', v: 'Face Cavity with Pillow, Arm Slots, Multi-Position Recline, Independent Footrest, Side Cup Pocket, Locking Buckle, Shoulder Carry Strap' },
+      { k: 'MOQ', v: '200 pcs' },
+      { k: 'Production Lead Time', v: '30 days' },
+      { k: 'Customisation', v: 'Colour, Logo and Packaging on Request' },
+    ],
+    customizationNote:
+      'Custom colour, logo and packaging options are available on request for wholesale and OEM projects. Frame configuration (rust-proof aluminium tube or powder-coated carbon steel) can be selected based on your requirements; the minimum order quantity is 200 pieces.',
+    inquiryPrompt:
+      'Interested in the CT-126 3-in-1 face-down tanning beach lounger? Send us your order quantity, destination and customization requirements to request a wholesale quotation.',
+    seoTitle: 'Face-Down Tanning Beach Lounger with Arm Holes | CT-126',
+    seoDescription:
+      'Wholesale 3-in-1 folding tanning beach lounger with face cavity, arm slots, adjustable recline, footrest and natural wood armrests. OEM colour and logo customisation available.',
+  },
 };
